@@ -5,7 +5,7 @@
 
 ## CLI
 
-* Use this for deposit https://github.com/nervosnetwork/godwoken-examples
+* Use this for deposit https://github.com/nervosnetwork/godwoken-examples/tree/v0.2.0
 
 ## Web3 RPC
 
