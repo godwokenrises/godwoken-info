@@ -11,3 +11,12 @@
 
 * RPC url: http://godwoken-testnet-web3-rpc.ckbapp.dev
 * Documentation: https://github.com/nervosnetwork/godwoken-web3#godwoken-web3-api
+
+## Web3 provider
+
+* Polyjuice provider: https://github.com/nervosnetwork/polyjuice-provider
+* NPM: https://www.npmjs.com/package/@polyjuice-provider/core
+
+## Examples
+
+* https://github.com/RetricSu/godwoken-polyjuice-compatibility-examples
