@@ -1,13 +1,13 @@
 ## Godwoken testnet
 
-* Rollup script hash: 0xe4ec5fab92d06359666d6dcf49ed515b71d0c14d262ffa772b973bcaa5dff5a9
-* Rollup config hash: 0x10daf80cb229562db0ca823f7006162e7daa2b8ec6d60e43c163678711383401
+* Rollup script hash: 0x9b260161e003972c0b699939bc164cfdcfce7fd40eb9135835008dd7e09d3dae
+* Rollup config hash: 0x452b8a69646927b5c34d9ac11f2f61a36c3add4611618e1c840a0818b8570b5d
 
 ## CLI
 
-* Use this for deposit https://github.com/nervosnetwork/godwoken-examples/tree/v0.2.0
+* Use this for deposit https://github.com/nervosnetwork/godwoken-examples
 
 ## Web3 RPC
 
 * RPC url: http://godwoken-testnet-web3-rpc.ckbapp.dev
-* Documentation: https://github.com/bitrocks/godwoken-web3#godwoken-web3-api
+* Documentation: https://github.com/nervosnetwork/godwoken-web3#godwoken-web3-api

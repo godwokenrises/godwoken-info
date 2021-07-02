@@ -1,32 +1,40 @@
 {
-  "tx_hash": "0x7f30985232bec45f0b516b17d7636d4d732332ef4044be388b0a0a7229c216f4",
-  "timestamp": 1620653002315,
-  "rollup_type_hash": "0xe4ec5fab92d06359666d6dcf49ed515b71d0c14d262ffa772b973bcaa5dff5a9",
+  "tx_hash": "0xb9065e6f53cb0b61b90bfe60196c172ca50b75aaa5120cb69bba7ef1bca06404",
+  "timestamp": 1625109071393,
+  "rollup_type_hash": "0x9b260161e003972c0b699939bc164cfdcfce7fd40eb9135835008dd7e09d3dae",
   "rollup_type_script": {
-    "code_hash": "0x00000000000000000000000000000000000000000000000000545950455f4944",
+    "code_hash": "0xb6994c60b6a7207483483dfd363d9aadb1166a8ea312d7e3ed9e9df2de4073ea",
     "hash_type": "type",
-    "args": "0x88f0fbd7ed2c3a4f56fa680795db597786acff052128a7873a253faf865a949d"
+    "args": "0xc3b25c8072e78e65fed368bffd3024ee56f8260f42006e328c0545cf329d3ccf"
   },
   "rollup_config": {
     "l1_sudt_script_type_hash": "0xc5e5dcf215925f7ef4dfaf5f4b4f105bc321c02776d6e7d52a1db3fcd9d011a4",
-    "custodian_script_type_hash": "0x212a15a55ebc7ceeed2ba430ddda8366c07d8d89c7a0f44dedcbe9420e663f65",
-    "deposition_script_type_hash": "0xea71353be5e3f86604cf6a4cc3486e537e8a817a2bf30629e7af75368f7d960d",
-    "withdrawal_script_type_hash": "0x81277dabace53763aa164e9aabe51ffe680f7376a8c9682971bee5165ccb6ff4",
-    "challenge_script_type_hash": "0xe9412652114f1657c7f121ec9edc127d024fb6bad4d69beee62699604ab0bc56",
-    "stake_script_type_hash": "0xde2292b97f6e9be67c7dabd2eb8edfc4d3df48dc82655320f2ee919afddf75ab",
-    "l2_sudt_validator_script_type_hash": "0x1aef7256827ec33b529a1736175388db0b875eaaa9d4f0e91ff6fd9d7db658bc",
+    "custodian_script_type_hash": "0x0315fdad192726de6683ae1a6c0b3ec1859898200320aa5724d8aefdf52137c0",
+    "deposit_script_type_hash": "0x2ac6755ea47cd118c147f31602929212d39944cc5a49ec12f63c71459be0999a",
+    "withdrawal_script_type_hash": "0x505faeb7287f122ee1f87318ce4c995398f4c6a42b034d9e0af0b0bdf3e1f1fe",
+    "challenge_script_type_hash": "0xe1fb447a81d9581fa422b73bff2ad5dc570b410866353bb5a9649cc4eaa1116c",
+    "stake_script_type_hash": "0x34d675a83c4363943c3d6c61bcf0ac86ff452c7002822961fbcf04f636c9b8db",
+    "l2_sudt_validator_script_type_hash": "0x108af2fe9fa8df03877ac62f77584ce56a33c37b0b74b6d6b8af6b1b8a5e93ab",
     "burn_lock_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "required_staking_capacity": "0x2540be400",
-    "challenge_maturity_blocks": "0xf",
-    "finality_blocks": "0x14",
+    "required_staking_capacity": "0x5af3107a4000",
+    "challenge_maturity_blocks": "0x1c2",
+    "finality_blocks": "0x2710",
     "reward_burn_rate": "0x32",
     "allowed_eoa_type_hashes": [
-      "0x473a68d74185bf645b04b91a2f25ce24184f3d80865a0a6b2aa63322f6ed1187"
+      "0xfcf093a5f1df4037cea259d49df005e0e7258b4f63e67233eda5b376b7fd2290",
+      "0x65a9638b4bb8595636a83a1f8b4288fade1fd1f2835b494af0ff88e8509d7768"
     ],
     "allowed_contract_type_hashes": [
-      "0x226bb6f73d2c9d762d8e8c7fc5e88b2bef007387b12fd5c436fb13325348e675",
-      "0x1aef7256827ec33b529a1736175388db0b875eaaa9d4f0e91ff6fd9d7db658bc",
-      "0xe19c4df574dd6ae966b1f788ee47108c859258b8cf92a1c845ed8efd2928086d"
+      "0x9106daf8e99123f86a954276032e7f5e95f82bc424f3664bc8b9f4fb9e226aa2",
+      "0x108af2fe9fa8df03877ac62f77584ce56a33c37b0b74b6d6b8af6b1b8a5e93ab",
+      "0x1b46dee6a36e20314f35d09f8bd1c67fe5449cb67bc96603dd8a9fee4539660a"
     ]
+  },
+  "rollup_config_cell_dep": {
+    "out_point": {
+      "tx_hash": "0x8efd7be4e8bc0114a476e724b37a1ae3d72bf53da6ca49c92cc63420574c19de",
+      "index": "0x0"
+    },
+    "dep_type": "code"
   }
 }
