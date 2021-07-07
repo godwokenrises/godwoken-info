@@ -19,6 +19,10 @@
 * Polyjuice provider: https://github.com/nervosnetwork/polyjuice-provider
 * NPM: https://www.npmjs.com/package/@polyjuice-provider/core
 
+## Documents
+
+* [Migrate EVM contract to polyjuice](https://github.com/nervosnetwork/godwoken/blob/master/docs/migrate_evm_contract_to_polyjuice.md)
+
 ## Examples
 
 * https://github.com/RetricSu/godwoken-polyjuice-compatibility-examples
