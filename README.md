@@ -17,7 +17,7 @@
 ## Web3 provider
 
 * Polyjuice provider: https://github.com/nervosnetwork/polyjuice-provider
-* NPM: https://www.npmjs.com/package/@polyjuice-provider/core
+* NPM: https://www.npmjs.com/search?q=%40polyjuice-provider
 
 ## Documents
 
