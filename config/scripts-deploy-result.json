@@ -1,0 +1,132 @@
+{
+  "custodian_lock": {
+    "script_type_hash": "0xec3d4f52a39423229323e809f56683221db9b8d123ba68a501c484a555d01ff6",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0xed671bb1593c4e95a9b98ac32a9b923f0dd438461e87fbca8a5352c0a132f3d2",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "deposit_lock": {
+    "script_type_hash": "0x18a6dff86b07d29cc0ca1bdf1886b4377ba5a1e6a3d538713103bf4a9bb17b1a",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0xc4675a8cdc39ba162b605ba39d3583fe1ad8bbf360188f2335587054225124c4",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "withdrawal_lock": {
+    "script_type_hash": "0x571f6024cfd11e4c7aee08d84ea125ecbe27e58c27aee4e9f48115f8596f2462",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x04b9d6d36deb6b4626b9734a72f14017a82f0c2f8b361f39369b38dd5554c1d4",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "challenge_lock": {
+    "script_type_hash": "0xeb6b1faba40dba9064c778249c3cfe3dd23a2575331874de6301cc2ce26936c4",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x1bfae0acdedca560aa20ed5cafde72f48a0d9efe47a84bde8fa0fd5fb1663001",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "stake_lock": {
+    "script_type_hash": "0x5c32b4277a1438c19a7745551410043ea45ec7d3e33bdaffe9ee85e26dde476e",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x0810e0344cefb682fecb014184c838346d0f89f7cf52cfa3d2cee1cfc4678b2f",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "state_validator": {
+    "script_type_hash": "0xbe8c73236402091d881ee1140062bdb938268b448de870aa148a0116648f5078",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x8670441816e03cb276125ad338167736936d872d819c47da9be0969b21a7cf52",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "meta_contract_validator": {
+    "script_type_hash": "0xd845c328d65a512732d6a1603a6c6229e37e56a434774d4bcb1fb1820c369430",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x80650131ff90e19ee2fdf2f4335062cfdc806e91a4eaeb4d72f5aba426bd1f61",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "l2_sudt_validator": {
+    "script_type_hash": "0x36198ab688948000db5338a0c90f8e4ada4cd8bf2887e27330c74285be3bd9ad",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x62c1b0a25ba5eaf8044a1e71792a35741aad2abc58c6d047a65e7bfceaf8942b",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "eth_account_lock": {
+    "script_type_hash": "0xd710bb9c7e77a2b64d4b2b8ee55f4abc859de955e3428c2aafbe0ca2a3f9d1c6",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x9e0f7b6d6f801ac795ba1dce9cd9f8cfe3591cded1ded18e6b761f1e0499ff5d",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "tron_account_lock": {
+    "script_type_hash": "0x9d62d55c7610963b561a7a59e7da189537684e6791124a6ca4581370904127dd",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x42714d9baf5c260de2e67230f39010927dac52e172296f598f5b46dcf6e13ec4",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "polyjuice_validator": {
+    "script_type_hash": "0xfb15ea7c9195f73b770ed777deaeea003a842536c61ae64cf8faead5ed1a37f0",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x7379d7a7320620c43a252123735c5d2ed5bad0d8d852d4a79262e5a1846d8ee6",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "state_validator_lock": {
+    "script_type_hash": "0x77924317acb0fcf09e2c49f5db3a8c02dfacb12875006fccdc42b029fede9b0d",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x0adad2ba566f1e5a675eef6744b237083e025000e51d76256b60f01885bdcbe6",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  },
+  "poa_state": {
+    "script_type_hash": "0xe440cb76402b69ec56e62fa090fc6d51ed37054f3c0404421861ff5e17da6097",
+    "cell_dep": {
+      "out_point": {
+        "tx_hash": "0x67c2d44aa3df33528da31f99d2278c925a4d99b1109f4b2db4a15d20d9c41e82",
+        "index": "0x0"
+      },
+      "dep_type": "code"
+    }
+  }
+}
