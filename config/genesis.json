@@ -1,68 +1,68 @@
 {
-  "tx_hash": "0xaef18e0b4973b35fc3ac05b0169e40e312237f47e6c801aedb2ad77541b2c95c",
-  "timestamp": 1627637963226,
-  "rollup_type_hash": "0x5f491f7e4e2fe0031c7d32911eb9b5cbd93e15c87f8cd7fba0f1a2fcf8695c4c",
+  "tx_hash": "0xb550f1a21f793e85db86a72d41c4acadef54ce7ceed9737137f68075c3420d45",
+  "timestamp": 1627704925644,
+  "rollup_type_hash": "0x4cc2e6526204ae6a2e8fcf12f7ad472f41a1606d5b9624beebd215d780809f6a",
   "rollup_type_script": {
-    "code_hash": "0xbe8c73236402091d881ee1140062bdb938268b448de870aa148a0116648f5078",
+    "code_hash": "0x5c365147bb6c40e817a2a53e0dec3661f7390cc77f0c02db138303177b12e9fb",
     "hash_type": "type",
-    "args": "0xe4fca16655c8d8f292a9305a869ec79750e7e648132bd13fdbe87fabba65a3cc"
+    "args": "0x213743d13048e9f36728c547ab736023a7426e15a3d7d1c82f43ec3b5f266df2"
   },
   "rollup_config": {
     "l1_sudt_script_type_hash": "0xc5e5dcf215925f7ef4dfaf5f4b4f105bc321c02776d6e7d52a1db3fcd9d011a4",
-    "custodian_script_type_hash": "0xec3d4f52a39423229323e809f56683221db9b8d123ba68a501c484a555d01ff6",
-    "deposit_script_type_hash": "0x18a6dff86b07d29cc0ca1bdf1886b4377ba5a1e6a3d538713103bf4a9bb17b1a",
-    "withdrawal_script_type_hash": "0x571f6024cfd11e4c7aee08d84ea125ecbe27e58c27aee4e9f48115f8596f2462",
-    "challenge_script_type_hash": "0xeb6b1faba40dba9064c778249c3cfe3dd23a2575331874de6301cc2ce26936c4",
-    "stake_script_type_hash": "0x5c32b4277a1438c19a7745551410043ea45ec7d3e33bdaffe9ee85e26dde476e",
-    "l2_sudt_validator_script_type_hash": "0x36198ab688948000db5338a0c90f8e4ada4cd8bf2887e27330c74285be3bd9ad",
+    "custodian_script_type_hash": "0x50fde68430caf9b2cb856cdecf9f35ea46f369ec02aa88d3237ca88620193fa0",
+    "deposit_script_type_hash": "0x5a2506bb68d81a11dcadad4cb7eae62a17c43c619fe47ac8037bc8ce2dd90360",
+    "withdrawal_script_type_hash": "0x170ef156e9f6132dbca6069dfd3e436f7d91c29d3ac7332c4b33e633b6a299b5",
+    "challenge_script_type_hash": "0xb761c2e77a9f7090ccb9d864ca6136e883257498230fb096ccbfd56e30c142f4",
+    "stake_script_type_hash": "0xf56d2feb9b534b5de517ea1d45d2e1719913a5df668b5a708f7bc45b7adeceb4",
+    "l2_sudt_validator_script_type_hash": "0xb6d6a2882d3d08cea565047bfe901cb2afe0cb790ea5e1b61e0532ef237c4a02",
     "burn_lock_hash": "0x77c93b0632b5b6c3ef922c5b7cea208fb0a7c427a13d50e13d3fefad17e0c590",
     "required_staking_capacity": "0x5af3107a4000",
     "challenge_maturity_blocks": "0x1c2",
     "finality_blocks": "0x2710",
     "reward_burn_rate": "0x32",
     "allowed_eoa_type_hashes": [
-      "0xd710bb9c7e77a2b64d4b2b8ee55f4abc859de955e3428c2aafbe0ca2a3f9d1c6",
-      "0x9d62d55c7610963b561a7a59e7da189537684e6791124a6ca4581370904127dd"
+      "0xdeec13a7b8e100579541384ccaf4b5223733e4a5483c3aec95ddc4c1d5ea5b22",
+      "0x28380fadb43a6f139d61a2509b69ecd2fbb2f61847ef6d39371b4f906c151ab5"
     ],
     "allowed_contract_type_hashes": [
-      "0xd845c328d65a512732d6a1603a6c6229e37e56a434774d4bcb1fb1820c369430",
-      "0x36198ab688948000db5338a0c90f8e4ada4cd8bf2887e27330c74285be3bd9ad",
-      "0xfb15ea7c9195f73b770ed777deaeea003a842536c61ae64cf8faead5ed1a37f0"
+      "0xd6d4b52ed2882cb0b2e1f802817c0ab05bd27da89a41ceddb25e0e347689ce69",
+      "0xb6d6a2882d3d08cea565047bfe901cb2afe0cb790ea5e1b61e0532ef237c4a02",
+      "0xbeb77e49c6506182ec0c02546aee9908aafc1561ec13beb488d14184c6cd1b79"
     ]
   },
   "rollup_config_cell_dep": {
     "out_point": {
-      "tx_hash": "0x780fe7816c054363f130be9de1bff3d9ae0ea629c1c9fa5af514f40666cdab4f",
+      "tx_hash": "0x1377bbb66cc242a50c190ff754f7dba09ca8ecb6766df38c567242b88e2ca18b",
       "index": "0x0"
     },
     "dep_type": "code"
   },
-  "layer2_genesis_hash": "0x077458d3edf70b5deea3ed8907b6822373754b96832f563601ab52b964e0ba34",
+  "layer2_genesis_hash": "0x097fca80f392047d03f7e3f7fb7efb8aaa08bfef7b0811dc61e9e9c8fe81271d",
   "genesis_config": {
-    "timestamp": 1627637963226,
-    "rollup_type_hash": "0x5f491f7e4e2fe0031c7d32911eb9b5cbd93e15c87f8cd7fba0f1a2fcf8695c4c",
-    "meta_contract_validator_type_hash": "0xd845c328d65a512732d6a1603a6c6229e37e56a434774d4bcb1fb1820c369430",
+    "timestamp": 1627704925644,
+    "rollup_type_hash": "0x4cc2e6526204ae6a2e8fcf12f7ad472f41a1606d5b9624beebd215d780809f6a",
+    "meta_contract_validator_type_hash": "0xd6d4b52ed2882cb0b2e1f802817c0ab05bd27da89a41ceddb25e0e347689ce69",
     "rollup_config": {
       "l1_sudt_script_type_hash": "0xc5e5dcf215925f7ef4dfaf5f4b4f105bc321c02776d6e7d52a1db3fcd9d011a4",
-      "custodian_script_type_hash": "0xec3d4f52a39423229323e809f56683221db9b8d123ba68a501c484a555d01ff6",
-      "deposit_script_type_hash": "0x18a6dff86b07d29cc0ca1bdf1886b4377ba5a1e6a3d538713103bf4a9bb17b1a",
-      "withdrawal_script_type_hash": "0x571f6024cfd11e4c7aee08d84ea125ecbe27e58c27aee4e9f48115f8596f2462",
-      "challenge_script_type_hash": "0xeb6b1faba40dba9064c778249c3cfe3dd23a2575331874de6301cc2ce26936c4",
-      "stake_script_type_hash": "0x5c32b4277a1438c19a7745551410043ea45ec7d3e33bdaffe9ee85e26dde476e",
-      "l2_sudt_validator_script_type_hash": "0x36198ab688948000db5338a0c90f8e4ada4cd8bf2887e27330c74285be3bd9ad",
+      "custodian_script_type_hash": "0x50fde68430caf9b2cb856cdecf9f35ea46f369ec02aa88d3237ca88620193fa0",
+      "deposit_script_type_hash": "0x5a2506bb68d81a11dcadad4cb7eae62a17c43c619fe47ac8037bc8ce2dd90360",
+      "withdrawal_script_type_hash": "0x170ef156e9f6132dbca6069dfd3e436f7d91c29d3ac7332c4b33e633b6a299b5",
+      "challenge_script_type_hash": "0xb761c2e77a9f7090ccb9d864ca6136e883257498230fb096ccbfd56e30c142f4",
+      "stake_script_type_hash": "0xf56d2feb9b534b5de517ea1d45d2e1719913a5df668b5a708f7bc45b7adeceb4",
+      "l2_sudt_validator_script_type_hash": "0xb6d6a2882d3d08cea565047bfe901cb2afe0cb790ea5e1b61e0532ef237c4a02",
       "burn_lock_hash": "0x77c93b0632b5b6c3ef922c5b7cea208fb0a7c427a13d50e13d3fefad17e0c590",
       "required_staking_capacity": "0x5af3107a4000",
       "challenge_maturity_blocks": "0x1c2",
       "finality_blocks": "0x2710",
       "reward_burn_rate": "0x32",
       "allowed_eoa_type_hashes": [
-        "0xd710bb9c7e77a2b64d4b2b8ee55f4abc859de955e3428c2aafbe0ca2a3f9d1c6",
-        "0x9d62d55c7610963b561a7a59e7da189537684e6791124a6ca4581370904127dd"
+        "0xdeec13a7b8e100579541384ccaf4b5223733e4a5483c3aec95ddc4c1d5ea5b22",
+        "0x28380fadb43a6f139d61a2509b69ecd2fbb2f61847ef6d39371b4f906c151ab5"
       ],
       "allowed_contract_type_hashes": [
-        "0xd845c328d65a512732d6a1603a6c6229e37e56a434774d4bcb1fb1820c369430",
-        "0x36198ab688948000db5338a0c90f8e4ada4cd8bf2887e27330c74285be3bd9ad",
-        "0xfb15ea7c9195f73b770ed777deaeea003a842536c61ae64cf8faead5ed1a37f0"
+        "0xd6d4b52ed2882cb0b2e1f802817c0ab05bd27da89a41ceddb25e0e347689ce69",
+        "0xb6d6a2882d3d08cea565047bfe901cb2afe0cb790ea5e1b61e0532ef237c4a02",
+        "0xbeb77e49c6506182ec0c02546aee9908aafc1561ec13beb488d14184c6cd1b79"
       ]
     },
     "secp_data_dep": {

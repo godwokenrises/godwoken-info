@@ -15,9 +15,9 @@
     "poa_state": "scripts/clerkb/state"
   },
   "lock": {
-    "code_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "hash_type": "data",
-    "args": "0x"
+    "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+    "hash_type": "type",
+    "args": "0x0d415dd6f7534b1e43bb395236db118327f41c75"
   },
   "built_scripts": {
     "meta_contract_validator": "scripts/godwoken-scripts/meta-contract-validator",

@@ -1,9 +1,9 @@
 ## Godwoken testnet
 
-* Rollup script hash: 0x5f491f7e4e2fe0031c7d32911eb9b5cbd93e15c87f8cd7fba0f1a2fcf8695c4c
-* Rollup config hash: 0xa7d9b9caf509f204e94a5f257d79b05b41ce227cc28bdf27bc3b711e63d53be4
-* ETH account lock type hash: 0xd710bb9c7e77a2b64d4b2b8ee55f4abc859de955e3428c2aafbe0ca2a3f9d1c6
-* Polyjuice contract type hash: 0xfb15ea7c9195f73b770ed777deaeea003a842536c61ae64cf8faead5ed1a37f0
+* Rollup script hash: 0x4cc2e6526204ae6a2e8fcf12f7ad472f41a1606d5b9624beebd215d780809f6a
+* Rollup config hash: 0x1b02390e31618c0b5477252caadeee92758043cfc06f0890d2acbc3fe5f1624a
+* ETH account lock type hash: 0xdeec13a7b8e100579541384ccaf4b5223733e4a5483c3aec95ddc4c1d5ea5b22
+* Polyjuice contract type hash: 0xbeb77e49c6506182ec0c02546aee9908aafc1561ec13beb488d14184c6cd1b79
 * Polyjuice creator_id(CKB): 3
 
 ## Web3 RPC
