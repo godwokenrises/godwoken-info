@@ -144,7 +144,7 @@ index = '0x0'
 dep_type = 'code'
 
 [block_producer.l1_sudt_type_dep.out_point]
-tx_hash = '0x0000000000000000000000000000000000000000000000000000000000000000'
+tx_hash = '0xe12877ebd2c3c364dc46c5c992bcfaf4fee33fa13eebdf82c591fc9825aab769'
 index = '0x0'
 [block_producer.allowed_eoa_deps.0xdeec13a7b8e100579541384ccaf4b5223733e4a5483c3aec95ddc4c1d5ea5b22]
 dep_type = 'code'
