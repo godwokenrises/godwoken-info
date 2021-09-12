@@ -81,7 +81,7 @@ account_id = 2
 dep_type = 'code'
 
 [block_producer.rollup_cell_type_dep.out_point]
-tx_hash = '0xe66ba09ec043eeb603e2534e410f567d54798acdeee632856dce5de6cf844489'
+tx_hash = '0xe53fac91d2fe1588c9c40a13b91d7f6259c8eddb2107ba2f9fe1d730d3c98a73'
 index = '0x0'
 
 [block_producer.rollup_config_cell_dep]
