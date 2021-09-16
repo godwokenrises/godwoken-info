@@ -52,6 +52,7 @@ dep_type = 'code'
 [genesis.secp_data_dep.out_point]
 tx_hash = '0x8f8c79eb6671709633fe6a46de93c0fedc9c1b8a6527a18d3983879542635c9f'
 index = '0x3'
+
 [chain.genesis_committed_info]
 number = '0x22e278'
 block_hash = '0x6ff8d1f0768af0b944287b280010119efad5c56a0bc037d8cb5716811c1b3670'
@@ -61,6 +62,9 @@ transaction_hash = '0xb550f1a21f793e85db86a72d41c4acadef54ce7ceed9737137f68075c3
 code_hash = '0x5c365147bb6c40e817a2a53e0dec3661f7390cc77f0c02db138303177b12e9fb'
 hash_type = 'type'
 args = '0x213743d13048e9f36728c547ab736023a7426e15a3d7d1c82f43ec3b5f266df2'
+
+[chain]
+skipped_invalid_block_list=["0x4e631850ffbd2259845f332bb32e3d46f288009269f9b48fb5b40266b0bc25d4"]
 
 [rpc_client]
 indexer_url = 'http://ckb-testnet-indexer-layer2-svc:8116'
