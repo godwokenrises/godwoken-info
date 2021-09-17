@@ -30,6 +30,6 @@
 
 - godwoken [v0.6.4-rc4](https://github.com/nervosnetwork/godwoken/tree/v0.6.4-rc4)
 - godwoken-scripts [v0.8.1-rc1](https://github.com/nervosnetwork/godwoken-scripts/tree/v0.8.1-rc1)
-- godwoken-polyjuice [v0.8.2-rc](https://github.com/nervosnetwork/godwoken-polyjuice/tree/v0.8.2-rc)
+- godwoken-polyjuice [v0.8.4](https://github.com/nervosnetwork/godwoken-polyjuice/tree/v0.8.4)
 - godwoken-web3 [v0.6.0-rc8](https://github.com/nervosnetwork/godwoken-web3/releases/tag/v0.6.0-rc8)
 - clerb - v0.4.0
