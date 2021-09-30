@@ -43,7 +43,7 @@
     "script_type_hash": "0xf56d2feb9b534b5de517ea1d45d2e1719913a5df668b5a708f7bc45b7adeceb4",
     "cell_dep": {
       "out_point": {
-        "tx_hash": "0xf251adc9a90d2a837e8fccc39778006b9112f79367509b3a0c6037674b3fc288",
+        "tx_hash": "0x9e7d41cb0372d26cae2f09493d5ef0fd74c2b4aec697b2cf05cd26d0d3537f13",
         "index": "0x0"
       },
       "dep_type": "code"
@@ -53,7 +53,7 @@
     "script_type_hash": "0x5c365147bb6c40e817a2a53e0dec3661f7390cc77f0c02db138303177b12e9fb",
     "cell_dep": {
       "out_point": {
-        "tx_hash": "0xe66ba09ec043eeb603e2534e410f567d54798acdeee632856dce5de6cf844489",
+        "tx_hash": "0x850e6c33d845356163c736bf8234856de0b0a8e2ad0c5227fc12058b8b602623",
         "index": "0x0"
       },
       "dep_type": "code"

@@ -52,7 +52,6 @@ dep_type = 'code'
 [genesis.secp_data_dep.out_point]
 tx_hash = '0x8f8c79eb6671709633fe6a46de93c0fedc9c1b8a6527a18d3983879542635c9f'
 index = '0x3'
-
 [chain.genesis_committed_info]
 number = '0x22e278'
 block_hash = '0x6ff8d1f0768af0b944287b280010119efad5c56a0bc037d8cb5716811c1b3670'
@@ -67,8 +66,8 @@ args = '0x213743d13048e9f36728c547ab736023a7426e15a3d7d1c82f43ec3b5f266df2'
 skipped_invalid_block_list=["0x4e631850ffbd2259845f332bb32e3d46f288009269f9b48fb5b40266b0bc25d4"]
 
 [rpc_client]
-indexer_url = 'http://ckb-testnet-indexer-layer2-svc:8116'
-ckb_url = 'http://ckb-testnet-layer2-svc:8114'
+indexer_url = 'http://godwoken-ckb-testnet-svc:8114/indexer'
+ckb_url = 'http://godwoken-ckb-testnet-svc:8114'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
@@ -85,7 +84,7 @@ account_id = 2
 dep_type = 'code'
 
 [block_producer.rollup_cell_type_dep.out_point]
-tx_hash = '0xe53fac91d2fe1588c9c40a13b91d7f6259c8eddb2107ba2f9fe1d730d3c98a73'
+tx_hash = '0x850e6c33d845356163c736bf8234856de0b0a8e2ad0c5227fc12058b8b602623'
 index = '0x0'
 
 [block_producer.rollup_config_cell_dep]
@@ -106,7 +105,7 @@ index = '0x0'
 dep_type = 'code'
 
 [block_producer.stake_cell_lock_dep.out_point]
-tx_hash = '0xf251adc9a90d2a837e8fccc39778006b9112f79367509b3a0c6037674b3fc288'
+tx_hash = '0x9e7d41cb0372d26cae2f09493d5ef0fd74c2b4aec697b2cf05cd26d0d3537f13'
 index = '0x0'
 
 [block_producer.poa_lock_dep]
