@@ -12,6 +12,7 @@
 * RPC url: http://godwoken-testnet-web3-rpc.ckbapp.dev
 * websocket Rpc url: ws://godwoken-testnet-web3-rpc.ckbapp.dev/ws
 * Documentation: https://github.com/nervosnetwork/godwoken-web3#godwoken-web3-api
+* Explorer: https://aggron.layerview.io
 
 ## Web3 provider
 
