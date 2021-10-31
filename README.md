@@ -28,8 +28,5 @@
 
 ## Git repositories
 
-- godwoken [v0.6.6-rc1](https://github.com/nervosnetwork/godwoken/tree/v0.6.6-rc1)
-- godwoken-scripts [v0.8.3-rc1](https://github.com/nervosnetwork/godwoken-scripts/tree/v0.8.3-rc1)
-- godwoken-polyjuice [v0.8.7](https://github.com/nervosnetwork/godwoken-polyjuice/tree/v0.8.7)
-- godwoken-web3 [v0.7.0-rc1](https://github.com/nervosnetwork/godwoken-web3/releases/tag/v0.7.0-rc1)
-- clerb - v0.4.0
+- godwoken [v0.6.8-rc2](https://github.com/nervosnetwork/godwoken-docker-prebuilds/tree/v0.6.8-rc2)
+
