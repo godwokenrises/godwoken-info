@@ -1,0 +1,76 @@
+{
+  "tx_hash": "0x66d27f7435e32bc32cb2eafc32f0b150d0d960d8a7ad6d873053285dfce3bfcb",
+  "timestamp": 1635654093386,
+  "rollup_type_hash": "0x40d73f0d3c561fcaae330eabc030d8d96a9d0af36d0c5114883658a350cb9e3b",
+  "rollup_type_script": {
+    "code_hash": "0xa9267ff5a16f38aa9382608eb9022883a78e6a40855107bb59f8406cce00e981",
+    "hash_type": "type",
+    "args": "0x2d8d67c8d73453c1a6d6d600e491b303910802e0cc90a709da9b15d26c5c48b3"
+  },
+  "rollup_config": {
+    "l1_sudt_script_type_hash": "0x5e7a36a77e68eecc013dfa2fe6a23f3b6c344b04005808694ae6dd45eea4cfd5",
+    "custodian_script_type_hash": "0x45c112df97daece27c4afa02b24b15f64403bdfd45ab2e0e88c9fb2a24796b1d",
+    "deposit_script_type_hash": "0xe24164e2204f998b088920405dece3dcfd5c1fbcb23aecfce4b3d3edf1488897",
+    "withdrawal_script_type_hash": "0xf1717ee388b181fcb14352055c00b7ea7cd7c27350ffd1a2dd231e059dde2fed",
+    "challenge_script_type_hash": "0x8f74432fb98bba53223df8dfc6e369affa5e0b1ea96da9a6e526628c87ce87aa",
+    "stake_script_type_hash": "0xff022d5512d3d5fd9614cc6ead110925d7a39e8916b6b1c8d5967846e4d32733",
+    "l2_sudt_validator_script_type_hash": "0xdb9896ecb952ab72f4f533d33fd9562fc1333fb6903899e93921efa9f8791408",
+    "burn_lock_hash": "0x77c93b0632b5b6c3ef922c5b7cea208fb0a7c427a13d50e13d3fefad17e0c590",
+    "required_staking_capacity": "0x2540be400",
+    "challenge_maturity_blocks": "0x1c2",
+    "finality_blocks": "0xe10",
+    "reward_burn_rate": "0x32",
+    "allowed_eoa_type_hashes": [
+      "0x1563080d175bf8ddd44a48e850cecf0c0b4575835756eb5ffd53ad830931b9f9",
+      "0x0bc55f318d738bd1f50e5d950110f0ce5ea2230ec1b62defe1271e06e680476f"
+    ],
+    "allowed_contract_type_hashes": [
+      "0xcb99a9de6811812e79ffcda132f4d716dc26016cf89d94c832c51f9defa6b14f",
+      "0xdb9896ecb952ab72f4f533d33fd9562fc1333fb6903899e93921efa9f8791408",
+      "0x636b89329db092883883ab5256e435ccabeee07b52091a78be22179636affce8"
+    ]
+  },
+  "rollup_config_cell_dep": {
+    "out_point": {
+      "tx_hash": "0xc8502347882e91a849146f20dcff59d413056be9093c83ea17ed88339596f142",
+      "index": "0x0"
+    },
+    "dep_type": "code"
+  },
+  "layer2_genesis_hash": "0x6483b2c27efe05ccf0f0970009f9dcb5ad9d37040707f1a2f42d789d3ca88819",
+  "genesis_config": {
+    "timestamp": 1635654093386,
+    "rollup_type_hash": "0x40d73f0d3c561fcaae330eabc030d8d96a9d0af36d0c5114883658a350cb9e3b",
+    "meta_contract_validator_type_hash": "0xcb99a9de6811812e79ffcda132f4d716dc26016cf89d94c832c51f9defa6b14f",
+    "rollup_config": {
+      "l1_sudt_script_type_hash": "0x5e7a36a77e68eecc013dfa2fe6a23f3b6c344b04005808694ae6dd45eea4cfd5",
+      "custodian_script_type_hash": "0x45c112df97daece27c4afa02b24b15f64403bdfd45ab2e0e88c9fb2a24796b1d",
+      "deposit_script_type_hash": "0xe24164e2204f998b088920405dece3dcfd5c1fbcb23aecfce4b3d3edf1488897",
+      "withdrawal_script_type_hash": "0xf1717ee388b181fcb14352055c00b7ea7cd7c27350ffd1a2dd231e059dde2fed",
+      "challenge_script_type_hash": "0x8f74432fb98bba53223df8dfc6e369affa5e0b1ea96da9a6e526628c87ce87aa",
+      "stake_script_type_hash": "0xff022d5512d3d5fd9614cc6ead110925d7a39e8916b6b1c8d5967846e4d32733",
+      "l2_sudt_validator_script_type_hash": "0xdb9896ecb952ab72f4f533d33fd9562fc1333fb6903899e93921efa9f8791408",
+      "burn_lock_hash": "0x77c93b0632b5b6c3ef922c5b7cea208fb0a7c427a13d50e13d3fefad17e0c590",
+      "required_staking_capacity": "0x2540be400",
+      "challenge_maturity_blocks": "0x1c2",
+      "finality_blocks": "0xe10",
+      "reward_burn_rate": "0x32",
+      "allowed_eoa_type_hashes": [
+        "0x1563080d175bf8ddd44a48e850cecf0c0b4575835756eb5ffd53ad830931b9f9",
+        "0x0bc55f318d738bd1f50e5d950110f0ce5ea2230ec1b62defe1271e06e680476f"
+      ],
+      "allowed_contract_type_hashes": [
+        "0xcb99a9de6811812e79ffcda132f4d716dc26016cf89d94c832c51f9defa6b14f",
+        "0xdb9896ecb952ab72f4f533d33fd9562fc1333fb6903899e93921efa9f8791408",
+        "0x636b89329db092883883ab5256e435ccabeee07b52091a78be22179636affce8"
+      ]
+    },
+    "secp_data_dep": {
+      "dep_type": "code",
+      "out_point": {
+        "tx_hash": "0xe2fb199810d49a4d8beec56718ba2593b665db9d52299a0f9e6e75416d73ff5c",
+        "index": "0x3"
+      }
+    }
+  }
+}
