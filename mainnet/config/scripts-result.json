@@ -3,7 +3,7 @@
     "script_type_hash": "0x45c112df97daece27c4afa02b24b15f64403bdfd45ab2e0e88c9fb2a24796b1d",
     "cell_dep": {
       "out_point": {
-        "tx_hash": "0x88ce5fc144ccd159c1d47bc60343ff7026798ba757c4b6a81db60fb0eb708703",
+        "tx_hash": "0x105c7f3b9a917537df6277198bab6bba9b3e3b5a8030a314e4cf499045b5b90b",
         "index": "0x0"
       },
       "dep_type": "code"
