@@ -33,7 +33,7 @@
     "script_type_hash": "0xb761c2e77a9f7090ccb9d864ca6136e883257498230fb096ccbfd56e30c142f4",
     "cell_dep": {
       "out_point": {
-        "tx_hash": "0xa47a62c34c9820e5226c0097ba8e7f17d5f243195b160805d3ff17a3e341b828",
+        "tx_hash": "0x67ca75e48a759d32a3cb9e5130adaf87b13858932f6c9d88c2a752a9d797b5a6",
         "index": "0x0"
       },
       "dep_type": "code"
