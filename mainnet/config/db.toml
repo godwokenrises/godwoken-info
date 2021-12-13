@@ -1,0 +1,36 @@
+[DBOptions]
+bytes_per_sync=1048576
+max_background_compactions=4
+max_background_flushes=2
+max_total_wal_size=134217728
+keep_log_file_num=32
+
+[CFOptions "default"]
+level_compaction_dynamic_level_bytes=true
+write_buffer_size=134217728
+min_write_buffer_number_to_merge=1
+max_write_buffer_number=2
+max_write_buffer_size_to_maintain=-1
+max_bytes_for_level_base=536870912
+
+[CFOptions "18"]
+prefix_extractor=8
+level_compaction_dynamic_level_bytes=true
+write_buffer_size=134217728
+min_write_buffer_number_to_merge=1
+max_write_buffer_number=2
+max_write_buffer_size_to_maintain=-1
+max_bytes_for_level_base=536870912
+
+[CFOptions "20"]
+prefix_extractor=32
+level_compaction_dynamic_level_bytes=true
+write_buffer_size=134217728
+min_write_buffer_number_to_merge=1
+max_write_buffer_number=2
+max_write_buffer_size_to_maintain=-1
+max_bytes_for_level_base=536870912
+
+[TableOptions/BlockBasedTable "default"]
+pin_l0_filter_and_index_blocks_in_cache=true
+cache_index_and_filter_blocks=true
