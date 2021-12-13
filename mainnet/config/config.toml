@@ -1,16 +1,19 @@
 node_mode = 'readonly'
 
 [[backends]]
+backend_type = 'Meta'
 validator_path = 'scripts/godwoken-scripts/meta-contract-validator'
 generator_path = 'scripts/godwoken-scripts/meta-contract-generator'
 validator_script_type_hash = '0xcb99a9de6811812e79ffcda132f4d716dc26016cf89d94c832c51f9defa6b14f'
 
 [[backends]]
+backend_type = 'Sudt'
 validator_path = 'scripts/godwoken-scripts/sudt-validator'
 generator_path = 'scripts/godwoken-scripts/sudt-generator'
 validator_script_type_hash = '0xdb9896ecb952ab72f4f533d33fd9562fc1333fb6903899e93921efa9f8791408'
 
 [[backends]]
+backend_type = 'Polyjuice'
 validator_path = 'scripts/godwoken-polyjuice/validator'
 generator_path = 'scripts/godwoken-polyjuice/generator'
 validator_script_type_hash = '0x636b89329db092883883ab5256e435ccabeee07b52091a78be22179636affce8'
@@ -78,7 +81,7 @@ polyjuice_script_code_hash = "0x636b89329db092883883ab5256e435ccabeee07b52091a78
 
 [debug]
 output_l1_tx_cycles = true
-expected_l1_tx_upper_bound_cycles = 45000000
+expected_l1_tx_upper_bound_cycles = 70000000
 debug_tx_dump_path = 'debug-tx-dump'
 enable_debug_rpc = false
 
@@ -202,3 +205,12 @@ args = '0xa4aea4f59d5f73c2efe2a48eceea6c2ab531a8c7'
 path = './store.db'
 
 [store.options]
+
+[fee]
+meta_cycles_limit = 20000
+sudt_cycles_limit = 20000
+withdraw_cycles_limit = 20000
+
+[fee.sudt_fee_rate_weight]
+0x1 = 1000 # CKB -> weight 1
+0xbe = 30000 # USDC -> weight 30
