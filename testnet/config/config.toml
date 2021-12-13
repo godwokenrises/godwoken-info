@@ -1,16 +1,19 @@
 node_mode = 'readonly'
 
 [[backends]]
+backend_type = 'Meta'
 validator_path = '/scripts/godwoken-scripts/meta-contract-validator'
 generator_path = '/scripts/godwoken-scripts/meta-contract-generator'
 validator_script_type_hash = '0xd6d4b52ed2882cb0b2e1f802817c0ab05bd27da89a41ceddb25e0e347689ce69'
 
 [[backends]]
+backend_type = 'Sudt'
 validator_path = '/scripts/godwoken-scripts/sudt-validator'
 generator_path = '/scripts/godwoken-scripts/sudt-generator'
 validator_script_type_hash = '0xb6d6a2882d3d08cea565047bfe901cb2afe0cb790ea5e1b61e0532ef237c4a02'
 
 [[backends]]
+backend_type = 'Polyjuice'
 validator_path = '/scripts/godwoken-polyjuice/validator'
 generator_path = '/scripts/godwoken-polyjuice/generator'
 validator_script_type_hash = '0xbeb77e49c6506182ec0c02546aee9908aafc1561ec13beb488d14184c6cd1b79'
