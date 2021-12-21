@@ -10,7 +10,7 @@
 
 * Chain ID: 71394
 * RPC url: https://mainnet.godwoken.io/rpc
-* Websocket Rpc url: https://mainnet.godwoken.io/ws
+* Websocket Rpc url: wss://mainnet.godwoken.io/ws
 * Documentation: https://docs.godwoken.io
 * Explorer: https://www.layerview.io
 
