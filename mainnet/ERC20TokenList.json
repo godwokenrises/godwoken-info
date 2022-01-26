@@ -825,5 +825,16 @@
           "sudtScriptArgs": "0xc66b8a7f4869272e1fd0565535cb444c319b6baafd386c5857f08d87e396cfd5",
           "ethAddress": "0x7554dc828c3f28093940BcBE33F438788043408b"
         }
-    }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped iBFR (ForceBridge from BSC)",
+          "symbol": "iBFR|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0x5e945aa680b40d9388d4988aee0aebdd2ad9185b6c0ebfd408fa974818de8b6a",
+          "ethAddress": "0xB5b12d26592cdEa10e056a8557Cb85B01B93F337"
+        }
+  }
 ]
