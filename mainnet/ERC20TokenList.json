@@ -737,5 +737,104 @@
             "sudtScriptArgs": "0xeb83e2d417474fb5aeaf3ab13be413e445159ade6865bd28834c34f680b9339a",
             "ethAddress": "0x9417475FC822a1e4677E2689d73579448B341418"
         }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped BNB (ForceBridge from BSC)",
+          "symbol": "BNB|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0x578cd6ab8c0800e6fbc17b58633857dac5626883af89f842e79cb8f7af24de75",
+          "ethAddress": "0xF818146b3abaA7830B94A47C2703eEDE5971D055"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped BUSD (ForceBridge from BSC)",
+          "symbol": "BUSD|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0x69c215249102308356778d58259c91c0f1988f6f5b07aa614921ee1803ea0059",
+          "ethAddress": "0xC61BC16E5199E4988d517a08Fa3133194EEdd9fB"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped USDT (ForceBridge from BSC)",
+          "symbol": "USDT|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0xfd6f1818fe746687ef5268f82ce1835ba1a94fdccee5f098a389aeed0067eb57",
+          "ethAddress": "0x5C30d9396a97f2279737E63B2bf64CC823046591"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped ETH (ForceBridge from BSC)",
+          "symbol": "ETH|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0xd61ddc3184767d677be0d741883779aa9513293c4eaa4e0687b5b1caf845edfe",
+          "ethAddress": "0x6c9A86CF7b9065CefBf9110D8585514c4D304dc3"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped BTCB (ForceBridge from BSC)",
+          "symbol": "BTCB|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0x9ea7beb4a36469e00bb30dbac75e93672441b483d519556ba9d1424b9294eae5",
+          "ethAddress": "0x3f8d2b24C6fa7b190f368C3701FfCb2bd919Af37"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped WBNB (ForceBridge from BSC)",
+          "symbol": "WBNB|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0x29f425f897896c15ca11fd154d8e22ac56b5f49e683d0c88979ad44752fcd520",
+          "ethAddress": "0x0F0C07a45F3c33898bD307541E01f34C6d054ed6"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped USDC (ForceBridge from BSC)",
+          "symbol": "USDC|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0xcedd0f67f2d218ab992284ab343c2e729d2a124a1612592deaa9f8b8f8a581dd",
+          "ethAddress": "0xA21B19d660917C1DE263Ad040Ba552737cfcEf50"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped SFP (ForceBridge from BSC)",
+          "symbol": "SFP|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0xc66b8a7f4869272e1fd0565535cb444c319b6baafd386c5857f08d87e396cfd5",
+          "ethAddress": "0x7554dc828c3f28093940BcBE33F438788043408b"
+        }
+    },
+    {
+        "info": {
+          "decimals": 18,
+          "name": "Wrapped iBFR (ForceBridge from BSC)",
+          "symbol": "iBFR|bsc"
+        },
+        "erc20Info": {
+          "sudtScriptArgs": "0x5e945aa680b40d9388d4988aee0aebdd2ad9185b6c0ebfd408fa974818de8b6a",
+          "ethAddress": "0xB5b12d26592cdEa10e056a8557Cb85B01B93F337"
+        }
     }
 ]
