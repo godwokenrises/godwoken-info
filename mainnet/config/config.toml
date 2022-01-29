@@ -71,9 +71,9 @@ ckb_url = 'http://127.0.0.1:8114'
 listen = 'localhost:8119'
 
 [rpc]
-allowed_sudt_proxy_creator_account_id = [2]
+allowed_sudt_proxy_creator_account_id = []
 sudt_proxy_code_hashes = ["0xa816b946a890cd593f780e8b6859a9b82314c5df4c8270d66f7c502e818345dc"]
-allowed_polyjuice_contract_creator_account_ids = [2]
+allowed_polyjuice_contract_creator_address = []
 polyjuice_script_code_hash = "0x636b89329db092883883ab5256e435ccabeee07b52091a78be22179636affce8"
 
 [debug]
