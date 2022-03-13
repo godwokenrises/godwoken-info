@@ -1,4 +1,4 @@
-## Godwoken testnet
+## Godwoken testnet_v0
 
 * Rollup script hash: 0x4cc2e6526204ae6a2e8fcf12f7ad472f41a1606d5b9624beebd215d780809f6a
 * Rollup config hash: 0x1b02390e31618c0b5477252caadeee92758043cfc06f0890d2acbc3fe5f1624a
@@ -26,8 +26,3 @@
 ## Examples
 
 * https://github.com/honestgoing/godwoken-polyjuice-compatibility-examples
-
-## Git repositories
-
-- godwoken [v0.6.8-rc2](https://github.com/nervosnetwork/godwoken-docker-prebuilds/tree/v0.6.8-rc2)
-
