@@ -13,7 +13,7 @@
 ## Web3 provider (v0)
 
 > Notice: 
-This provider was deprcated in Godwoken v1.
+This provider was deprecated in Godwoken v1.
 
 * Polyjuice provider: https://github.com/nervosnetwork/polyjuice-provider
 * NPM: https://www.npmjs.com/search?q=%40polyjuice-provider
