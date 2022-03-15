@@ -1,7 +1,7 @@
 ## Godwoken testnet_v1
 
 * [Readonly node config](./gw-testnet_v1-config-readonly.toml)
-* Explorer: TBD
+* Explorer: https://v1.aggron.gwscan.com
 * How to run a Godwoken testnet_v1 readonly node?
 ```sh
 cd testnet_v1
