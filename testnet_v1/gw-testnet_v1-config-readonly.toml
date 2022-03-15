@@ -1,0 +1,227 @@
+node_mode = 'readonly'
+
+# It is better to run your own CKB testnet node
+# see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
+[rpc_client]
+# Public Nodes (rate_limit: 20 req/s)
+# ckb_url = 'https://testnet.ckbapp.dev/rpc'
+# indexer_url = 'https://testnet.ckbapp.dev/indexer'
+# Backup Nodes
+ckb_url = 'http://3.83.107.217:8114'
+indexer_url = 'http://3.83.107.217:8116'
+
+[rpc_server]
+listen = '0.0.0.0:8119'
+enable_methods = []
+
+[[backends]]
+validator_path = '/scripts/godwoken-scripts/meta-contract-validator'
+generator_path = '/scripts/godwoken-scripts/meta-contract-generator'
+validator_script_type_hash = '0xe37425948da964046bc470a77f5b3df3a661e8b0e0f8c1987239d9e4b9a629f5'
+backend_type = 'Meta'
+
+[[backends]]
+validator_path = '/scripts/godwoken-scripts/sudt-validator'
+generator_path = '/scripts/godwoken-scripts/sudt-generator'
+validator_script_type_hash = '0xe3e86ae888b3df3328842d11708b8ac30a7385c9f60d67f64efec65b7129e78e'
+backend_type = 'Sudt'
+
+[[backends]]
+validator_path = '/scripts/godwoken-polyjuice/validator'
+generator_path = '/scripts/godwoken-polyjuice/generator'
+validator_script_type_hash = '0x8755bcc380e3494b6a2ca9657d16fd2254f7570731c4b87867ed8b747b1b3457'
+backend_type = 'Polyjuice'
+
+[[backends]]
+validator_path = '/scripts/godwoken-polyjuice/eth_addr_reg_validator'
+generator_path = '/scripts/godwoken-polyjuice/eth_addr_reg_generator'
+validator_script_type_hash = '0xea308236e06a55ea8951de922eb9eb7344ec8ac7e1909a29d3b580b97a980a4f'
+backend_type = 'EthAddrReg'
+
+[genesis]
+timestamp = 1647016853555
+rollup_type_hash = '0x4940246f168f4106429dc641add3381a44b5eef61e7754142f594e986671a575'
+meta_contract_validator_type_hash = '0xe37425948da964046bc470a77f5b3df3a661e8b0e0f8c1987239d9e4b9a629f5'
+
+[genesis.rollup_config]
+l1_sudt_script_type_hash = '0xc5e5dcf215925f7ef4dfaf5f4b4f105bc321c02776d6e7d52a1db3fcd9d011a4'
+custodian_script_type_hash = '0xddd20a7146c2a6544429cf48c548ee7b37bb7780d681691931ed054dd02711d5'
+deposit_script_type_hash = '0xcc2b4e14d7dfeb1e72f7708ac2d7f636ae222b003bac6bccfcf8f4dfebd9c714'
+withdrawal_script_type_hash = '0x318e8882bec0339fa20584f4791152e71d5b71c5dbd8bf988fd511373e142222'
+challenge_script_type_hash = '0xa5839e7fcab588d9ea8d91af2fee532630453505fb79d13b4128c0587630a983'
+stake_script_type_hash = '0xb41a9d497feb64f338227253ce48cf4c4be8055983abb159da4d084844fe4c7b'
+l2_sudt_validator_script_type_hash = '0xe3e86ae888b3df3328842d11708b8ac30a7385c9f60d67f64efec65b7129e78e'
+burn_lock_hash = '0x77c93b0632b5b6c3ef922c5b7cea208fb0a7c427a13d50e13d3fefad17e0c590'
+required_staking_capacity = '0x9184e72a000'
+challenge_maturity_blocks = '0x1c2'
+finality_blocks = '0x32'
+reward_burn_rate = '0x32'
+compatible_chain_id = '0x315db'
+
+[[genesis.rollup_config.allowed_eoa_type_hashes]]
+type_ = 'eth'
+hash = '0x10571f91073fdc3cdef4ddad96b4204dd30d6355f3dda9a6d7fc0fa0326408da'
+
+[[genesis.rollup_config.allowed_eoa_type_hashes]]
+type_ = 'tron'
+hash = '0x7e19e979f77305cdd61e39258b747809297ece6ab4d579ee38de8bce85d52124'
+
+[[genesis.rollup_config.allowed_contract_type_hashes]]
+type_ = 'meta'
+hash = '0xe37425948da964046bc470a77f5b3df3a661e8b0e0f8c1987239d9e4b9a629f5'
+
+[[genesis.rollup_config.allowed_contract_type_hashes]]
+type_ = 'sudt'
+hash = '0xe3e86ae888b3df3328842d11708b8ac30a7385c9f60d67f64efec65b7129e78e'
+
+[[genesis.rollup_config.allowed_contract_type_hashes]]
+type_ = 'polyjuice'
+hash = '0x8755bcc380e3494b6a2ca9657d16fd2254f7570731c4b87867ed8b747b1b3457'
+
+[[genesis.rollup_config.allowed_contract_type_hashes]]
+type_ = 'eth_addr_reg'
+hash = '0xea308236e06a55ea8951de922eb9eb7344ec8ac7e1909a29d3b580b97a980a4f'
+
+[genesis.secp_data_dep]
+dep_type = 'code'
+
+[genesis.secp_data_dep.out_point]
+tx_hash = '0x8f8c79eb6671709633fe6a46de93c0fedc9c1b8a6527a18d3983879542635c9f'
+index = '0x3'
+
+[chain]
+skipped_invalid_block_list = []
+
+[chain.genesis_committed_info]
+number = '0x474dfb'
+block_hash = '0x83b2d257c12ee0e17ba144591f74da6a20616fdac0b556ad3a80ccbb3f26f000'
+transaction_hash = '0x57c145f5c74e9d6f2d1c888725341397070dad8c800f2b5b34ecd1053dcac57d'
+
+[chain.rollup_type_script]
+code_hash = '0x0d3bfeaa292a59fcb58ed026e8f14e2167bd27f1765aa4b2af7d842b6123c6a9'
+hash_type = 'type'
+args = '0x8137c84a9089f92fee684ac840532ee1133b012a9d42b6b76b74fbdde6999230'
+
+[debug]
+output_l1_tx_cycles = true
+expected_l1_tx_upper_bound_cycles = 70000000
+debug_tx_dump_path = '/mnt/debug-tx-dump'
+enable_debug_rpc = false
+
+[block_producer.wallet_config]
+privkey_path = '/deploy/pk'
+
+[block_producer.wallet_config.lock]
+code_hash = '0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8'
+hash_type = 'type'
+args = '0x989be46d563a52182d329475784a25a29cf08939'
+
+[block_producer]
+account_id = 2
+check_mem_block_before_submit = false
+
+[block_producer.rollup_config_cell_dep]
+dep_type = 'code'
+
+[block_producer.rollup_config_cell_dep.out_point]
+tx_hash = '0xff3186d3a4abda6ae689d249d793ac18d6620658d480aec5daf1b3fb8e562d48'
+index = '0x0'
+[block_producer.challenger_config.rewards_receiver_lock]
+code_hash = '0x49027a6b9512ef4144eb41bc5559ef2364869748e65903bd14da08c3425c0503'
+hash_type = 'type'
+args = '0x0000000000000000000000000000000000000001'
+
+[block_producer.challenger_config.burn_lock]
+code_hash = '0x0000000000000000000000000000000000000000000000000000000000000000'
+hash_type = 'data'
+args = '0x'
+
+[mem_pool]
+execute_l2tx_max_cycles = 100000000
+restore_path = '/mnt/mem-pool/mem-block'
+
+[store]
+path = '/mnt/store20220312.db'
+options_file = '/deploy/db.toml'
+cache_size = 536870912
+
+[store.options]
+[consensus.contract_type_scripts.state_validator]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x2f853015574e0e81098d3935d834b73f681a65af5007b9929ed55af625c7bd45'
+
+[consensus.contract_type_scripts.deposit_lock]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x5810857b054908304a33030b31a1f995106cb4caae47194feb394b202f53eec4'
+
+[consensus.contract_type_scripts.stake_lock]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x98285b808f23cdca8803e0dfa573e3894b3591ba1107814d52bf69f13459c676'
+
+[consensus.contract_type_scripts.custodian_lock]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x08cf4eb46b5d5d8723813f9dfa60d27bc16a8ee4826675739744ea75cba6f393'
+
+[consensus.contract_type_scripts.withdrawal_lock]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0xca4fec413acba90c3e50a0422d3780a8c5e8cce70ba0e6736d4b6559d79d639d'
+
+[consensus.contract_type_scripts.challenge_lock]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x495e972e07ccbf716f5c1d5ca16e3b2b61311e17f5b83796450e29cd62c343e3'
+
+[consensus.contract_type_scripts.l1_sudt]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x4db75e03349f4f2ec792476035dd1b7376c683130f7e2e74024be2d9ee064511'
+
+[consensus.contract_type_scripts.omni_lock]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x1b8572b16c07f46a0efed623aea6de05d45985b9a7c1b0b52276da5d9f9615b7'
+
+[consensus.contract_type_scripts.allowed_eoa_scripts.0x7e19e979f77305cdd61e39258b747809297ece6ab4d579ee38de8bce85d52124]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0xc293cce8fd3a73fcb5af7dd99c9d0dbb846cf6119fb44e192c2ec9dd24583b0f'
+
+[consensus.contract_type_scripts.allowed_eoa_scripts.0x10571f91073fdc3cdef4ddad96b4204dd30d6355f3dda9a6d7fc0fa0326408da]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0xa106633bfca7a11ec3695c9bcadcd592e26360d8b8e0f9648e5a4e8b254474a2'
+
+[consensus.contract_type_scripts.allowed_contract_scripts.0xea308236e06a55ea8951de922eb9eb7344ec8ac7e1909a29d3b580b97a980a4f]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x3b408237b2d85b3ddc41c046fc8c0e2fe1d17b85cee98ba5c93452d152f354f2'
+
+[consensus.contract_type_scripts.allowed_contract_scripts.0xe3e86ae888b3df3328842d11708b8ac30a7385c9f60d67f64efec65b7129e78e]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x255b504a8758f842382006bd29c7d21a69d97328981564666ac9eb368eb8214d'
+
+[consensus.contract_type_scripts.allowed_contract_scripts.0xe37425948da964046bc470a77f5b3df3a661e8b0e0f8c1987239d9e4b9a629f5]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x51139ef42833d4e98401d0637ed2cfb17ad005d1264b3b44b0c7a3a400c8d189'
+
+[consensus.contract_type_scripts.allowed_contract_scripts.0x8755bcc380e3494b6a2ca9657d16fd2254f7570731c4b87867ed8b747b1b3457]
+code_hash = '0x00000000000000000000000000000000000000000000000000545950455f4944'
+hash_type = 'type'
+args = '0x203863345da572ac66ecd978cb39c7e37818ca3dc80a5966f7a69cac71cdaa7c'
+
+[dynamic_config.fee_config]
+meta_cycles_limit = 20000
+sudt_cycles_limit = 20000
+eth_addr_reg_cycles_limit = 20000
+withdraw_cycles_limit = 20000
+
+[dynamic_config.rpc_config]
+allowed_sudt_proxy_creator_account_id = []
+sudt_proxy_code_hashes = []

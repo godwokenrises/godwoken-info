@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  gw-testnet_v1-readonly:
+    container_name: gw-testnet_v1-readonly
+    image: ghcr.io/flouse/godwoken-prebuilds:v1.0.x-202203110200
+    working_dir: /deploy
+    volumes:
+    - ./chain-data/readonly/:/mnt/
+    - ./gw-testnet_v1-config-readonly.toml:/deploy/config.toml
+    - ./db.toml:/deploy/db.toml:ro
+    - ./block_producer_pk:/deploy/pk:ro
+    environment:
+    - RUST_LOG=info
+    command: godwoken

@@ -1,4 +1,4 @@
-## Godwoken mainnet
+## Godwoken mainnet_v0
 
 * Rollup script hash: 0x40d73f0d3c561fcaae330eabc030d8d96a9d0af36d0c5114883658a350cb9e3b
 * Rollup config hash: 0x2882e450fce6ba51eb4167c6a5d86cf48013be8c0e2ff870ea820e4bafa70f1c
@@ -13,8 +13,3 @@
 * Websocket Rpc url: wss://mainnet.godwoken.io/ws
 * Documentation: https://docs.godwoken.io
 * Explorer: https://www.layerview.io
-
-## Git repositories
-
-- godwoken [v0.6.8-rc2](https://github.com/nervosnetwork/godwoken-docker-prebuilds/tree/v0.6.8-rc2)
-
