@@ -3,6 +3,7 @@ version: '3.8'
 services:
   gw-testnet_v1-readonly:
     container_name: gw-testnet_v1-readonly
+    # image: ghcr.io/flouse/godwoken-prebuilds:v1.0.x
     image: ghcr.io/flouse/godwoken-prebuilds:v1.0.x-202203110200
     working_dir: /deploy
     volumes:
@@ -11,5 +12,62 @@ services:
     - ./db.toml:/deploy/db.toml:ro
     - ./block_producer_pk:/deploy/pk:ro
     environment:
+    # other log envs: ,gw_generator=debug,gw_chain=debug
     - RUST_LOG=info
     command: godwoken
+    expose:
+    - "8119"
+    - "8219"
+
+  postgres:
+    image: postgres:alpine
+    expose:
+    - "5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: lumos
+      POSTGRES_PASSWORD: password
+    volumes:
+    - ./web3-indexer-schema.sql:/docker-entrypoint-initdb.d/web3-indexer-schema.sql
+    - ./chain-data/postgresql/data:/var/lib/postgresql/data
+  
+  redis:
+    image: redis:bullseye
+    user: redis:redis
+    volumes:
+    - ./chain-data/redis-data:/data
+
+  web3:
+    image: ghcr.io/nervosnetwork/godwoken-web3-prebuilds:compatibility-breaking-changes-8e38985
+    volumes: 
+    - ./web3.env:/godwoken-web3/packages/api-server/.env
+    working_dir: /godwoken-web3
+    command: bash -c 'set -ex ; yarn run build && yarn run start:prod'
+    ports:
+    - 8024:3000
+    depends_on: 
+    - redis
+    - postgres
+    - gw-testnet_v1-readonly
+
+  web3-indexer:
+    deploy:
+      restart_policy:
+        delay: 60s
+        max_attempts: 3
+    image: ghcr.io/nervosnetwork/godwoken-web3-indexer-prebuilds:compatibility-breaking-changes-94e2025
+    volumes: 
+    - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
+    working_dir: /var/lib/web3-indexer
+    command: [ "gw-web3-indexer" ]
+    environment:
+    - RUST_LOG=info
+    depends_on: 
+      web3:
+        condition: service_started
+      gw-testnet_v1-readonly:
+        condition: service_started
+      postgres:
+        condition: service_started
+      redis:
+        condition: service_started
