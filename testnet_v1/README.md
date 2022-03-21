@@ -37,5 +37,6 @@ docker-compose up
 
 ## Documentation
 
+* [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
 * [How to test your Solidity contracts on Godwoken v1 using Hardhat](https://github.com/nervosnetwork/godwoken-tests)
 
