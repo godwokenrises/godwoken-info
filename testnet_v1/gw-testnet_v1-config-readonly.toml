@@ -6,6 +6,7 @@ node_mode = 'readonly'
 # Public Nodes (rate_limit: 20 req/s)
 # ckb_url = 'https://testnet.ckbapp.dev/rpc'
 # indexer_url = 'https://testnet.ckbapp.dev/indexer'
+
 # Backup Nodes
 ckb_url = 'http://3.83.107.217:8114'
 indexer_url = 'http://3.83.107.217:8116'
@@ -13,6 +14,7 @@ indexer_url = 'http://3.83.107.217:8116'
 [rpc_server]
 listen = '0.0.0.0:8119'
 enable_methods = []
+err_receipt_ws_listen = '0.0.0.0:8219'
 
 [[backends]]
 validator_path = '/scripts/godwoken-scripts/meta-contract-validator'
@@ -141,7 +143,7 @@ execute_l2tx_max_cycles = 100000000
 restore_path = '/mnt/mem-pool/mem-block'
 
 [store]
-path = '/mnt/store20220312.db'
+path = '/mnt/store20220320.db'
 options_file = '/deploy/db.toml'
 cache_size = 536870912
 
