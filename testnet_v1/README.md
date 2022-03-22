@@ -35,6 +35,9 @@ docker-compose up
 {"jsonrpc":"2.0","id":1,"result":"0x315db00000006"}⏎
 ```
 
+* ETH Address Registry ID: 4
+`ETH Address Registry` layer2 [contract](https://github.com/nervosnetwork/godwoken-polyjuice/blob/8741eec/c/eth_addr_reg.c#L2) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
+
 ## Documentation
 
 * [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
