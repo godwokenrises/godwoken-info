@@ -36,10 +36,10 @@ docker-compose up
 ```
 
 * ETH Address Registry ID: 4
-`ETH Address Registry` layer2 [contract](https://github.com/nervosnetwork/godwoken-polyjuice/blob/8741eec/c/eth_addr_reg.c#L2) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
+> `ETH Address Registry` layer2 [contract](https://github.com/nervosnetwork/godwoken-polyjuice/blob/8741eec/c/eth_addr_reg.c#L2) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
 
 ## Documentation
 
 * [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
 * [How to test your Solidity contracts on Godwoken v1 using Hardhat](https://github.com/nervosnetwork/godwoken-tests)
-
+* [Godwoken v1 changes](https://github.com/jjyr/godwoken/blob/refactor-sudt-with-registry-address/docs/CHANGES.md)
