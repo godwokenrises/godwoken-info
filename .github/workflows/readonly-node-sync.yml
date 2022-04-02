@@ -1,0 +1,93 @@
+name: Sync Test
+
+on:
+  push:
+
+jobs:
+  gw-testnet_v1-readonly-node-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Cache chain-data
+      uses: actions/cache@v3
+      with:
+        path: |
+          testnet_v1/chain-data/readonly
+        key: chain-data-${{ hashFiles('testnet_v1/docker-compose.yml') }}-${{ github.sha }}
+        restore-keys: |
+          chain-data-${{ hashFiles('testnet_v1/docker-compose.yml') }}
+
+    - name: Run a Godwoken testnet_v1 readonly node
+      working-directory: testnet_v1
+      run: |
+        cat docker-compose.yml
+        docker-compose up -d gw-testnet_v1-readonly
+
+    - name: Wait until Godwoken readonly node is ready to serve
+      id: gw-readonly-node
+      working-directory: testnet_v1
+      run: |
+        echo "Wait until Godwoken readonly node is ready to serve"
+        timeout 5h bash -c 'while true; do
+          docker-compose logs --tail 10 | egrep "sync new block" | tail --lines=1
+          docker-compose ps gw-testnet_v1-readonly | egrep healthy && break \
+          || echo "Godwoken readonly node is not healthy."
+          sleep 6s
+        done'
+        docker-compose ps gw-testnet_v1-readonly | egrep healthy \
+        && echo "::set-output name=state::healthy" 
+
+    - name: Start Godwoken Web3 and Indexer services if Godwoken readonly node is ready
+      if: steps.gw-readonly-node.outputs.state == 'healthy'
+      id: up
+      working-directory: testnet_v1
+      run: |
+        docker-compose up -d
+        timeout 1h bash -c 'while true; do
+          docker-compose ps web3 | egrep healthy && break \
+          || echo "Godwoken Web3 RPC is not healthy."
+          sleep 6s
+        done'
+        docker-compose ps web3-indexer | egrep Up \
+        && echo "::set-output name=web3::true" 
+
+    - uses: actions/checkout@v3
+      with:
+        repository: nervosnetwork/godwoken-tests
+        ref: v1
+        path: godwoken-tests
+        submodules: 'true'
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        # cache: 'yarn'
+    - run: yarn install
+      working-directory: godwoken-tests/tools
+    - name: Check if web3 service is ready
+      if: steps.up.outputs.web3 == 'true'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const { getTipBlockNumber } = require("./godwoken-tests/scripts/helper");
+          const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+          const PUBLIC_WEB3_RPC='https://godwoken-testnet-web3-v1-rpc.ckbapp.dev';
+          while (await getTipBlockNumber() !== await getTipBlockNumber(PUBLIC_WEB3_RPC)) {
+            await sleep(6666);
+          }
+
+    - name: Save logs
+      if: always()
+      working-directory: testnet_v1
+      run: |
+        docker-compose logs --tail 66
+        docker-compose stop
+        docker-compose logs > /tmp/docker.log
+    - name: Archive logs
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: docker-logs
+        path: |
+          /tmp/docker.log

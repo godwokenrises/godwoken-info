@@ -45,7 +45,9 @@ services:
 
   web3:
     image: ghcr.io/nervosnetwork/godwoken-web3-prebuilds:compatibility-breaking-changes-8e38985
-    volumes: 
+    healthcheck:
+      test: curl http://127.0.0.1:3000 || exit 1
+    volumes:
     - ./web3.env:/godwoken-web3/packages/api-server/.env
     working_dir: /godwoken-web3
     command: bash -c 'set -ex ; yarn run build && yarn run start:prod'

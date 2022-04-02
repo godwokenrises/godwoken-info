@@ -7,7 +7,14 @@
 cd testnet_v1
 # Note: It is better to run your own CKB testnet node first.
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
-docker-compose up
+docker-compose up -d gw-testnet_v1-readonly
+
+echo "Wait until Godwoken readonly node is ready to serve"
+watch -n 6 "docker-compose ps && docker-compose logs --tail 10 | egrep 'sync new block'" 
+
+# if the status of gw-testnet_v1-readonly service is healthy,
+# then Start Godwoken Web3 and Indexer services
+docker-compose up -d
 ```
 
 ## Web3 RPC

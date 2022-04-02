@@ -143,7 +143,7 @@ execute_l2tx_max_cycles = 100000000
 restore_path = '/mnt/mem-pool/mem-block'
 
 [store]
-path = '/mnt/store20220320.db'
+path = '/mnt/store20220402.db'
 options_file = '/deploy/db.toml'
 cache_size = 536870912
 
