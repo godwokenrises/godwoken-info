@@ -4,19 +4,19 @@ version: '3.8'
 services:
   gw-testnet_v1-readonly:
     container_name: gw-testnet_v1-readonly
-    image: ghcr.io/flouse/godwoken-prebuilds:v1.0.x-202203110200
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:v1.0.x-202204021030
     healthcheck:
-      test: curl http://127.0.0.1:8119 || exit 1
-      start_period: 3s
-      interval: 6s
-      timeout: 12s
-      retries: 60
+      test: /healthcheck.sh
+      start_period: 10s
+      interval: 30s
+      retries: 100000
     working_dir: /deploy
     volumes:
     - ./chain-data/readonly/:/mnt/
     - ./gw-testnet_v1-config-readonly.toml:/deploy/config.toml
     - ./db.toml:/deploy/db.toml:ro
     - ./block_producer_pk:/deploy/pk:ro
+    - ./healthcheck.sh:/healthcheck.sh:ro
     environment:
     # other log envs: ,gw_generator=debug,gw_chain=debug
     - RUST_LOG=info
