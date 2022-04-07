@@ -1,16 +1,22 @@
+# Requires docker-compose >= 1.29.0
 version: '3.8'
 
 services:
   gw-testnet_v1-readonly:
     container_name: gw-testnet_v1-readonly
-    # image: ghcr.io/flouse/godwoken-prebuilds:v1.0.x
-    image: ghcr.io/flouse/godwoken-prebuilds:v1.0.x-202203110200
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:v1.0.x-202204021030
+    healthcheck:
+      test: /healthcheck.sh
+      start_period: 10s
+      interval: 30s
+      retries: 100000
     working_dir: /deploy
     volumes:
     - ./chain-data/readonly/:/mnt/
     - ./gw-testnet_v1-config-readonly.toml:/deploy/config.toml
     - ./db.toml:/deploy/db.toml:ro
     - ./block_producer_pk:/deploy/pk:ro
+    - ./healthcheck.sh:/healthcheck.sh:ro
     environment:
     # other log envs: ,gw_generator=debug,gw_chain=debug
     - RUST_LOG=info
@@ -39,7 +45,9 @@ services:
 
   web3:
     image: ghcr.io/nervosnetwork/godwoken-web3-prebuilds:compatibility-breaking-changes-8e38985
-    volumes: 
+    healthcheck:
+      test: curl http://127.0.0.1:3000 || exit 1
+    volumes:
     - ./web3.env:/godwoken-web3/packages/api-server/.env
     working_dir: /godwoken-web3
     command: bash -c 'set -ex ; yarn run build && yarn run start:prod'
@@ -51,10 +59,6 @@ services:
     - gw-testnet_v1-readonly
 
   web3-indexer:
-    deploy:
-      restart_policy:
-        delay: 60s
-        max_attempts: 3
     image: ghcr.io/nervosnetwork/godwoken-web3-indexer-prebuilds:compatibility-breaking-changes-94e2025
     volumes: 
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
@@ -66,7 +70,7 @@ services:
       web3:
         condition: service_started
       gw-testnet_v1-readonly:
-        condition: service_started
+        condition: service_healthy
       postgres:
         condition: service_started
       redis:
