@@ -75,25 +75,6 @@
     },
     {
         "network": "Ethereum",
-        "ident": "0x9BE89D2a4cd102D8Fecc6BF9dA793be995C22541",
-        "info": {
-            "decimals": 8,
-            "name": "BTC",
-            "symbol": "BTC",
-            "logoURI": "https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=002",
-            "shadow": {
-                "network": "Nervos",
-                "ident": "0xcbccf7b074091788dcec4d480d4cd6ef1b6863093bb6bc7117935dc00e7f616d"
-            }
-        },
-        "erc20Info": {
-            "accountID": 173,
-            "sudtScriptArgs": "0xcbccf7b074091788dcec4d480d4cd6ef1b6863093bb6bc7117935dc00e7f616d",
-            "ethAddress": "0x0bd2Ae370ED96d0Da4d96b648C8A64ffac038264"
-        }
-    },
-    {
-        "network": "Ethereum",
         "ident": "0x85c4EdC43724e954e5849cAAab61A26a9CB65F1B",
         "info": {
             "decimals": 8,
