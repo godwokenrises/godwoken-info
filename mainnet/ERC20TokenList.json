@@ -75,82 +75,6 @@
     },
     {
         "network": "Ethereum",
-        "ident": "0x9BE89D2a4cd102D8Fecc6BF9dA793be995C22541",
-        "info": {
-            "decimals": 8,
-            "name": "BTC",
-            "symbol": "BTC",
-            "logoURI": "https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=002",
-            "shadow": {
-                "network": "Nervos",
-                "ident": "0xcbccf7b074091788dcec4d480d4cd6ef1b6863093bb6bc7117935dc00e7f616d"
-            }
-        },
-        "erc20Info": {
-            "accountID": 173,
-            "sudtScriptArgs": "0xcbccf7b074091788dcec4d480d4cd6ef1b6863093bb6bc7117935dc00e7f616d",
-            "ethAddress": "0x0bd2Ae370ED96d0Da4d96b648C8A64ffac038264"
-        }
-    },
-    {
-        "network": "Ethereum",
-        "ident": "0x85c4EdC43724e954e5849cAAab61A26a9CB65F1B",
-        "info": {
-            "decimals": 8,
-            "name": "BCH",
-            "symbol": "BCH",
-            "logoURI": "https://cryptologos.cc/logos/bitcoin-cash-bch-logo.svg?v=002",
-            "shadow": {
-                "network": "Nervos",
-                "ident": "0xf144bd4a01ef841548b818a1c88d5814bd601148540a19a126fc16106a0528f4"
-            }
-        },
-        "erc20Info": {
-            "accountID": 174,
-            "sudtScriptArgs": "0xf144bd4a01ef841548b818a1c88d5814bd601148540a19a126fc16106a0528f4",
-            "ethAddress": "0x7E9b67663254Ec92E7a1541d9eCF38634082C79B"
-        }
-    },
-    {
-        "network": "Ethereum",
-        "ident": "0x7884F51dC1410387371ce61747CB6264E1dAeE0B",
-        "info": {
-            "decimals": 10,
-            "name": "DOT",
-            "symbol": "DOT",
-            "logoURI": "https://cryptologos.cc/logos/polkadot-new-dot-logo.svg?v=013",
-            "shadow": {
-                "network": "Nervos",
-                "ident": "0xd7f285335bd528fb0cbc0130ad0eb7f9a0e0213d7d3e529a7d2cf117cfd9228f"
-            }
-        },
-        "erc20Info": {
-            "accountID": 175,
-            "sudtScriptArgs": "0xd7f285335bd528fb0cbc0130ad0eb7f9a0e0213d7d3e529a7d2cf117cfd9228f",
-            "ethAddress": "0x73cF05f15FCaf981bc6B83022F1976E4A18d50Da"
-        }
-    },
-    {
-        "network": "Ethereum",
-        "ident": "0x8E16bf47065Fe843A82f4399bAF5aBac4E0822B7",
-        "info": {
-            "decimals": 18,
-            "name": "FIL",
-            "symbol": "FIL",
-            "logoURI": "https://cryptologos.cc/logos/filecoin-fil-logo.svg?v=002",
-            "shadow": {
-                "network": "Nervos",
-                "ident": "0x27fa9ae7448651cd3c3e300e5ab55a71bbb73fe8f63b172f7b41544f07a4bd6c"
-            }
-        },
-        "erc20Info": {
-            "accountID": 176,
-            "sudtScriptArgs": "0x27fa9ae7448651cd3c3e300e5ab55a71bbb73fe8f63b172f7b41544f07a4bd6c",
-            "ethAddress": "0x7961e2C06Dc43BCECE67f4b5d68A71c163486601"
-        }
-    },
-    {
-        "network": "Ethereum",
         "ident": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
         "info": {
             "decimals": 18,
@@ -432,25 +356,6 @@
             "accountID": 191,
             "sudtScriptArgs": "0xf49a7d57cd50907d28c0e2ae57b559165ce08aa0ff074fb3b277f6dc5eb285ee",
             "ethAddress": "0x7ab542aB5A31b29D9cB34eC2aa64356C3A36023F"
-        }
-    },
-    {
-        "network": "Ethereum",
-        "ident": "0xe3fb646fC31Ca12657B17070bC31a52E323b8543",
-        "info": {
-            "decimals": 18,
-            "name": "EGLD",
-            "symbol": "EGLD",
-            "logoURI": "https://cryptologos.cc/logos/elrond-egld-egld-logo.svg?v=013",
-            "shadow": {
-                "network": "Nervos",
-                "ident": "0x39b90300b9dbc235ac0d861c3b40a83806f616562136e64a4d7f95f97873368f"
-            }
-        },
-        "erc20Info": {
-            "accountID": 192,
-            "sudtScriptArgs": "0x39b90300b9dbc235ac0d861c3b40a83806f616562136e64a4d7f95f97873368f",
-            "ethAddress": "0x403461edb51D6d4D3cD6AbF5148db30Bc5BAAc6F"
         }
     },
     {
