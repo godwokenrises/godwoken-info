@@ -1,8 +1,9 @@
 ## Public network
 
-* [Testnet_v1](./testnet_v1/)
+* [Betanet_v1.1](./betanet_v1.1)
+* [Testnet_v1.0](./testnet_v1/) (will be deprecated)
 * [Mainnet_v0](./mainnet)
-* [Testnet_v0](./testnet)
+* [Testnet_v0](./testnet_v0) (deprecated)
 
 ## Documents
 
