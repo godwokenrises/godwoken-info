@@ -14,35 +14,35 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          testnet_v1/chain-data/readonly
-        key: chain-data-${{ hashFiles('testnet_v1/docker-compose.yml') }}-${{ github.sha }}
+          testnet_v1_1/chain-data/readonly
+        key: chain-data-${{ hashFiles('testnet_v1_1/docker-compose.yml') }}-${{ github.sha }}
         restore-keys: |
-          chain-data-${{ hashFiles('testnet_v1/docker-compose.yml') }}
+          chain-data-${{ hashFiles('testnet_v1_1/docker-compose.yml') }}
 
     - name: Run a Godwoken testnet_v1 readonly node
-      working-directory: testnet_v1
+      working-directory: testnet_v1_1
       run: |
         cat docker-compose.yml
-        docker-compose up -d gw-testnet_v1-readonly
+        docker-compose up -d gw-readonly
 
     - name: Wait until Godwoken readonly node is ready to serve
       id: gw-readonly-node
-      working-directory: testnet_v1
+      working-directory: testnet_v1_1
       run: |
         echo "Wait until Godwoken readonly node is ready to serve"
         timeout 5h bash -c 'while true; do
           docker-compose logs --tail 10 | egrep "sync new block" | tail --lines=1
-          docker-compose ps gw-testnet_v1-readonly | egrep healthy && break \
+          docker-compose ps gw-readonly | egrep healthy && break \
           || echo "Godwoken readonly node is not healthy."
           sleep 6s
         done'
-        docker-compose ps gw-testnet_v1-readonly | egrep healthy \
+        docker-compose ps gw-readonly | egrep healthy \
         && echo "::set-output name=state::healthy" 
 
     - name: Start Godwoken Web3 and Indexer services if Godwoken readonly node is ready
       if: steps.gw-readonly-node.outputs.state == 'healthy'
       id: up
-      working-directory: testnet_v1
+      working-directory: testnet_v1_1
       run: |
         docker-compose up -d
         timeout 1h bash -c 'while true; do
@@ -72,16 +72,16 @@ jobs:
         script: |
           const { getTipBlockNumber } = require("./godwoken-tests/scripts/helper");
           const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-          const PUBLIC_WEB3_RPC='https://godwoken-testnet-web3-v1-rpc.ckbapp.dev';
+          const PUBLIC_WEB3_RPC='https://godwoken-testnet-v1.ckbapp.dev';
           while (await getTipBlockNumber() !== await getTipBlockNumber(PUBLIC_WEB3_RPC)) {
             await sleep(6666);
           }
 
     - name: Save logs
       if: always()
-      working-directory: testnet_v1
+      working-directory: testnet_v1_1
       run: |
-        docker-compose logs --tail 66
+        docker-compose logs --tail 666
         docker-compose stop
         docker-compose logs > /tmp/docker.log
     - name: Archive logs

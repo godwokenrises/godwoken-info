@@ -1,0 +1,13 @@
+# Web3 Indexer Configs
+
+chain_id=71401
+
+l2_sudt_type_script_hash="0xb6176a6170ea33f8468d61f934c45c57d29cdc775bcd3ecaaec183f04b9f33d9"
+polyjuice_type_script_hash="0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736"
+rollup_type_hash="0x702359ea7f073558921eb50d8c1c77e92f760c8f8656bde4995f26b8963e2dd8"
+eth_account_lock_hash="0x07521d0aa8e66ef441ebc31204d86bb23fc83e9edc58c19dbb1b0ebe64336ec0"
+
+godwoken_rpc_url="http://gw-readonly:8119"
+ws_rpc_url="ws://gw-readonly:8219"
+
+pg_url="postgres://user:password@postgres:5432/lumos"

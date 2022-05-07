@@ -1,0 +1,77 @@
+# Requires docker-compose >= 1.29.0
+version: '3.9'
+
+services:
+  gw-readonly:
+    container_name: gw-testnet_v1.1-readonly
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:v1.1.0-beta-202205080219
+    healthcheck:
+      test: /healthcheck.sh
+      start_period: 10s
+      interval: 30s
+      retries: 100000
+    working_dir: /deploy
+    volumes:
+    - ./chain-data/readonly/:/mnt/
+    - ./gw-testnet_v1.1-config-readonly.toml:/deploy/config.toml
+    - ./db.toml:/deploy/db.toml:ro
+    - ./block_producer.key:/deploy/block_producer.key:ro
+    - ./healthcheck.sh:/healthcheck.sh:ro
+    environment:
+    # other log envs: ,gw_generator=debug,gw_chain=debug
+    - RUST_LOG=info
+    command: godwoken
+    expose:
+    - "8119"
+    - "8219"
+
+  postgres:
+    image: postgres:alpine
+    expose:
+    - "5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: lumos
+      POSTGRES_PASSWORD: password
+    volumes:
+    - ./web3-indexer-schema.sql:/docker-entrypoint-initdb.d/web3-indexer-schema.sql
+    - ./chain-data/postgresql/data:/var/lib/postgresql/data
+  
+  redis:
+    image: redis:bullseye
+    user: redis:redis
+    volumes:
+    - ./chain-data/redis-data:/data
+
+  web3:
+    image: ghcr.io/nervosnetwork/godwoken-web3-prebuilds:compatibility-breaking-changes-2b1dc8e
+    healthcheck:
+      test: curl http://127.0.0.1:3000 || exit 1
+    volumes:
+    - ./web3.env:/godwoken-web3/packages/api-server/.env
+    working_dir: /godwoken-web3
+    command: bash -c 'set -ex ; yarn run build && yarn run start:prod'
+    ports:
+    - '8024:3000'
+    depends_on: 
+    - redis
+    - postgres
+    - gw-readonly
+
+  web3-indexer:
+    image: ghcr.io/nervosnetwork/godwoken-web3-indexer-prebuilds:compatibility-breaking-changes-b97b1a5
+    volumes: 
+    - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
+    working_dir: /var/lib/web3-indexer
+    command: [ "gw-web3-indexer" ]
+    environment:
+    - RUST_LOG=info
+    depends_on: 
+      web3:
+        condition: service_started
+      gw-readonly:
+        condition: service_healthy
+      postgres:
+        condition: service_started
+      redis:
+        condition: service_started
