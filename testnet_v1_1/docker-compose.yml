@@ -4,7 +4,7 @@ version: '3.9'
 services:
   gw-readonly:
     container_name: gw-testnet_v1.1-readonly
-    image: ghcr.io/nervosnetwork/godwoken-prebuilds:v1.1.0-beta-202205080219
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:v1.1.1-beta
     healthcheck:
       test: /healthcheck.sh
       start_period: 10s
