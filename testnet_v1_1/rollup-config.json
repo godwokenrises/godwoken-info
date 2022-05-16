@@ -1,0 +1,32 @@
+{
+  "l1_sudt_script_type_hash": "0xc5e5dcf215925f7ef4dfaf5f4b4f105bc321c02776d6e7d52a1db3fcd9d011a4",
+  "l1_sudt_cell_dep": {
+    "dep_type": "code",
+    "out_point": {
+      "tx_hash": "0xe12877ebd2c3c364dc46c5c992bcfaf4fee33fa13eebdf82c591fc9825aab769",
+      "index": "0x0"
+    }
+  },
+  "cells_lock": {
+    "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+    "hash_type": "type",
+    "args": "0xc267a8b93cdae15fb06325f11a72b1047bd4d33c"
+  },
+  "reward_lock": {
+    "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+    "args": "0x699d2dd60134ddf8979df6005d9530929c8a72e1",
+    "hash_type": "type"
+  },
+  "burn_lock": {
+    "code_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "hash_type": "data",
+    "args": "0x"
+  },
+  "required_staking_capacity": 60000000000000,
+  "challenge_maturity_blocks": 450,
+  "finality_blocks": 100,
+  "reward_burn_rate": 50,
+  "chain_id": 71401,
+  "allowed_eoa_type_hashes": [],
+  "allowed_contract_type_hashes": []
+}
