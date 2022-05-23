@@ -21,7 +21,7 @@ docker-compose up -d
 
 * RPC URL: https://godwoken-testnet-v1.ckbapp.dev
 * Websocket RPC URL: wss://godwoken-testnet-v1.ckbapp.dev/ws
-* Bridge: https://testnet.bridge.godwoken.io
+* Godwoken Token Bridge: https://testnet.bridge.godwoken.io
 
 * Polyjuice Creator ID: 4
 ```js
