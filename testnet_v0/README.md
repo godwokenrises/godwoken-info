@@ -1,3 +1,5 @@
+# Deprecated
+
 ## Godwoken testnet_v0
 
 * Rollup script hash: 0x4cc2e6526204ae6a2e8fcf12f7ad472f41a1606d5b9624beebd215d780809f6a
