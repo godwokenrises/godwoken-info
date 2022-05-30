@@ -10,7 +10,7 @@ services:
     expose: [8116]
     environment:
     - RUST_LOG=info
-    command: -s /ckb-testnet-indexer-data -c https://testnet.ckbapp.dev/rpc -l 0.0.0.0:8116
+    command: -s /ckb-testnet-indexer-data -c http://3.83.107.217:8114 -l 0.0.0.0:8116
     # TODO: healthcheck:
 
   gw-readonly:
