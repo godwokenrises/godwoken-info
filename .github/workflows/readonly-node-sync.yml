@@ -25,9 +25,9 @@ jobs:
       run: |
         [[ -d chain-data/ckb-indexer-data ]] && exit 0
         mkdir -p chain-data && cd chain-data
-        curl -LO https://cdn-ckb-tools.sfo3.digitaloceanspaces.com/snapshots/20220522-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z
-        7z x 20220522-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z -ockb-indexer-data
-        rm 20220522-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z
+        curl -LO https://cdn-ckb-tools.sfo3.digitaloceanspaces.com/snapshots/20220605-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z
+        7z x 20220605-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z -ockb-indexer-data
+        rm 20220605-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z
 
     - name: Run a Godwoken testnet_v1 readonly node
       working-directory: testnet_v1_1
@@ -49,7 +49,8 @@ jobs:
           docker-compose ps gw-readonly | egrep healthy && break \
           || echo "Godwoken readonly node is not healthy."
           sleep 6s
-        done' || (echo "timeout and exit 0" && exit 0)
+        done' || exit 0
+        docker-compose ps ps
         docker-compose ps gw-readonly | egrep healthy \
         && echo "::set-output name=state::healthy"
 
