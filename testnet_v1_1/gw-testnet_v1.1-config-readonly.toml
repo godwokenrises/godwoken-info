@@ -7,9 +7,13 @@ node_mode = 'readonly'
 # ckb_url = 'https://testnet.ckbapp.dev/rpc'
 # indexer_url = 'https://testnet.ckbapp.dev/indexer'
 
+# Local Nodes
+indexer_url = 'http://ckb-testnet-indexer:8116'
+# ckb_url = 'http://172.17.0.1:38114'
+
 # Backup Nodes
 ckb_url = 'http://3.83.107.217:8114'
-indexer_url = 'http://3.83.107.217:8116'
+# indexer_url = 'http://3.83.107.217:8116'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
@@ -143,7 +147,7 @@ execute_l2tx_max_cycles = 100000000
 restore_path = '/mnt/mem-pool/mem-block'
 
 [store]
-path = '/mnt/store20220508.db'
+path = '/mnt/store20220528.db'
 options_file = '/deploy/db.toml'
 cache_size = 536870912
 [store.options]

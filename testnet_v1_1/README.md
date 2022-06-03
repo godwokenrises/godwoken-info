@@ -1,7 +1,7 @@
 ## Godwoken testnet_v1.1
 
 * [Readonly node config](./gw-testnet_v1.1-config-readonly.toml)
-* Explorer (GwScan): https://v1.betanet.gwscan.com
+* Explorer (GwScan): https://v1.testnet.gwscan.com
 * How to run a Godwoken testnet_v1.1 readonly node?
 ```sh
 cd testnet_v1.1
@@ -17,11 +17,11 @@ watch -n 6 "docker-compose ps && docker-compose logs --tail 10 | egrep 'sync new
 docker-compose up -d
 ```
 
-## Web3 RPC
+## Godwoken Web3 RPC
 
 * RPC URL: https://godwoken-testnet-v1.ckbapp.dev
 * Websocket RPC URL: wss://godwoken-testnet-v1.ckbapp.dev/ws
-* Bridge: https://testnet.bridge.godwoken.io
+* Godwoken Token Bridge: https://testnet.bridge.godwoken.io
 
 * Polyjuice Creator ID: 4
 ```js

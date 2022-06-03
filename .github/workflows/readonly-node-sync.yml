@@ -14,42 +14,59 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
+          chain-data/
           testnet_v1_1/chain-data/readonly
         key: chain-data-${{ hashFiles('testnet_v1_1/docker-compose.yml') }}-${{ github.sha }}
         restore-keys: |
           chain-data-${{ hashFiles('testnet_v1_1/docker-compose.yml') }}
+        
+    # https://cdn-ckb-tools.sfo3.digitaloceanspaces.com/snapshots/snapshots.html?prefix=snapshots/
+    - name: Get the snapshots of ckb-indexer
+      run: |
+        [[ -d chain-data/ckb-indexer-data ]] && exit 0
+        mkdir -p chain-data && cd chain-data
+        curl -LO https://cdn-ckb-tools.sfo3.digitaloceanspaces.com/snapshots/20220522-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z
+        7z x 20220522-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z -ockb-indexer-data
+        rm 20220522-nervos-ckb-indexer-0.3.2-testnet-snapshot.7z
 
     - name: Run a Godwoken testnet_v1 readonly node
       working-directory: testnet_v1_1
       run: |
         cat docker-compose.yml
         docker-compose up -d gw-readonly
+        docker-compose ps
 
     - name: Wait until Godwoken readonly node is ready to serve
       id: gw-readonly-node
       working-directory: testnet_v1_1
+      env:
+        TIMEOUT: 5h
       run: |
+        docker-compose ps
         echo "Wait until Godwoken readonly node is ready to serve"
-        timeout 5h bash -c 'while true; do
+        timeout ${{ env.TIMEOUT }} bash -c 'while true; do
           docker-compose logs --tail 10 | egrep "sync new block" | tail --lines=1
           docker-compose ps gw-readonly | egrep healthy && break \
           || echo "Godwoken readonly node is not healthy."
           sleep 6s
-        done'
+        done' || (echo "timeout and exit 0" && exit 0)
         docker-compose ps gw-readonly | egrep healthy \
-        && echo "::set-output name=state::healthy" 
+        && echo "::set-output name=state::healthy"
 
     - name: Start Godwoken Web3 and Indexer services if Godwoken readonly node is ready
       if: steps.gw-readonly-node.outputs.state == 'healthy'
       id: up
       working-directory: testnet_v1_1
+      env:
+        TIMEOUT: 1h
       run: |
+        docker-compose ps
         docker-compose up -d
-        timeout 1h bash -c 'while true; do
+        timeout ${{ env.TIMEOUT }} bash -c 'while true; do
           docker-compose ps web3 | egrep healthy && break \
           || echo "Godwoken Web3 RPC is not healthy."
           sleep 6s
-        done'
+        done' || echo "timeout(${{ env.TIMEOUT }})"
         docker-compose ps web3-indexer | egrep Up \
         && echo "::set-output name=web3::true" 
 
@@ -68,19 +85,30 @@ jobs:
     - name: Check if web3 service is ready
       if: steps.up.outputs.web3 == 'true'
       uses: actions/github-script@v6
+      timeout-minutes: 30
       with:
         script: |
           const { getTipBlockNumber } = require("./godwoken-tests/scripts/helper");
           const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
           const PUBLIC_WEB3_RPC='https://godwoken-testnet-v1.ckbapp.dev';
-          while (await getTipBlockNumber() !== await getTipBlockNumber(PUBLIC_WEB3_RPC)) {
+          let isSyncedToTip = false;
+          while (!isSyncedToTip) {
             await sleep(6666);
+            try {
+              const [localTip, fullnodeTip] = await Promise.all([
+                getTipBlockNumber(), getTipBlockNumber(PUBLIC_WEB3_RPC)
+              ]);
+              isSyncedToTip = localTip === fullnodeTip; 
+            } catch (error) {
+              console.error(error);
+            }
           }
 
     - name: Save logs
       if: always()
       working-directory: testnet_v1_1
       run: |
+        docker-compose ps
         docker-compose logs --tail 666
         docker-compose stop
         docker-compose logs > /tmp/docker.log
