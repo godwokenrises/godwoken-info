@@ -2,7 +2,7 @@
 
 * [Testnet_v1.1](./testnet_v1_1)
 * [Testnet_v1.0](./testnet_v1_0/) (will be deprecated)
-* [Mainnet_v0](./mainnet)
+* [Mainnet_v0](./mainnet_v0)
 * [Testnet_v0](./testnet_v0) (deprecated)
 
 ## Documents
