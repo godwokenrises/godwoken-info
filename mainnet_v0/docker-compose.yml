@@ -1,0 +1,89 @@
+version: '3.9'
+
+services:
+  # Running your own CKB mainnet node is recommended.
+  # ckb-mainnet:
+  #   container_name: ckb-mainnet-node-202206
+  #   image: nervos/ckb:v0.103.0
+  #   volumes:
+  #   - ./chain-data/ckb-mainnet-data:/var/lib/ckb
+  #   ports:
+  #   - 8114
+  #   command: run
+  # ckb-mainnet-indexer:
+  #   depends_on:
+  #   - ckb-mainnet
+  #   container_name: ckb-mainnet-indexer-v0.3.2-202206
+  #   image: nervos/ckb-indexer:0.3.2
+  #   volumes:
+  #   - ./chain-data/ckb-mainnet-indexer:/mainnet-indexer-data
+  #   ports:
+  #   - 8116
+  #   environment:
+  #   - RUST_LOG=info
+  #   command: -s /mainnet-indexer-data -c http://ckb-mainnet:8114 -l 0.0.0.0:8116
+
+  postgres:
+    image: postgres:alpine
+    expose:
+    - "5432"
+    environment:
+      POSTGRES_DB: web3-indexer
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+    - ./web3-indexer-schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    - ./chain-data/postgresql/data:/var/lib/postgresql/data
+  
+  redis:
+    image: redis:bullseye
+    user: redis:redis
+    volumes:
+    - ./chain-data/redis-data:/data
+
+  gw-mainnet-readonly:
+    container_name: gw-mainnet-readonly-202206
+    # depends_on:
+    # - ckb-mainnet-indexer
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:v0.10.4-hotfix.1-202205201051
+    volumes:
+    - ./chain-data/:/mainnet_v0/
+    - ./gw-readonly-config.toml:/deploy/config.toml
+    - ./db.toml:/deploy/db.toml
+    - ./mock_pk:/deploy/pk
+    environment:
+    - RUST_LOG=info
+    working_dir: /deploy
+    command: godwoken
+    ports:
+    - 8119
+    - 8219
+
+  web3:
+    image: nervos/godwoken-web3-prebuilds:v0.13.6
+    healthcheck:
+      test: curl http://127.0.0.1:3000 || exit 1
+    volumes:
+    - ./web3.env:/godwoken-web3/packages/api-server/.env
+    working_dir: /godwoken-web3
+    command: bash -c 'set -ex ; yarn run build && yarn run start:prod'
+    ports: [3000]
+    depends_on:
+      redis:
+        condition: service_started
+      postgres:
+        condition: service_started
+      gw-mainnet-readonly:
+        condition: service_started
+
+  web3-indexer:
+    image: nervos/godwoken-web3-indexer-prebuilds:v0.13.6
+    volumes:
+    - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
+    working_dir: /var/lib/web3-indexer
+    command: [ "gw-web3-indexer" ]
+    environment:
+    - RUST_LOG=info
+    depends_on:
+      web3:
+        condition: service_healthy

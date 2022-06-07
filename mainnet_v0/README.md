@@ -13,3 +13,12 @@
 * Websocket RPC URL: wss://mainnet.godwoken.io/ws
 * Documentation: https://docs.godwoken.io
 * Explorer: https://www.gwscan.com
+
+## How to run a Godwoken mainnet_v0 readonly node
+```bash
+cd mainnet_v0
+docker-compose up gw-mainnet-readonly
+
+# wait until the readonly node synced to TIP, start web3 and web3-indexer services
+docker-compose up -d
+```
