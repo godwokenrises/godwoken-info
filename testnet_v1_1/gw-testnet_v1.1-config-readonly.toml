@@ -39,18 +39,17 @@ validator_script_type_hash = '0xa30dcbb83ebe571f49122d8d1ce4537679ebf511261c8ffa
 backend_type = 'EthAddrReg'
 [[backend_switches.backends]]
 validator_path = '/scripts/godwoken-polyjuice-v1.1.5-beta/validator'
-generator_path = '/scripts/godwoken-polyjuice-v1.1.5-beta/generator_log'
+generator_path = '/scripts/godwoken-polyjuice-v1.1.5-beta/generator'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
 
-# TODO
-# [[backend_switches]]
-# switch_height = 110000
-# [[backend_switches.backends]]
-# validator_path = '/scripts/godwoken-polyjuice/validator'
-# generator_path = '/scripts/godwoken-polyjuice/generator_log'
-# validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
-# backend_type = 'Polyjuice'
+[[backend_switches]]
+switch_height = 110000
+[[backend_switches.backends]]
+validator_path = '/scripts/godwoken-polyjuice-v1.2.0/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.2.0/generator'
+validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
+backend_type = 'Polyjuice'
 
 [genesis]
 timestamp = 1651979802446
