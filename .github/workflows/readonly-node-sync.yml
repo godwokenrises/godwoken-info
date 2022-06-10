@@ -45,12 +45,15 @@ jobs:
         docker-compose ps
         echo "Wait until Godwoken readonly node is ready to serve"
         timeout ${{ env.TIMEOUT }} bash -c 'while true; do
-          docker-compose logs --tail 10 | egrep "sync new block" | tail --lines=1
+          docker-compose logs --tail=10 &> /tmp/docker.log
+          egrep "bad block" /tmp/docker.log && bad_block_found=true && break
+          egrep "sync new block" /tmp/docker.log | tail --lines=1
           docker-compose ps gw-readonly | egrep healthy && break \
           || echo "Godwoken readonly node is not healthy."
           sleep 6s
         done' || exit 0
-        docker-compose ps ps
+        [[ $bad_block_found == true ]] && exit 1
+        docker-compose ps
         docker-compose ps gw-readonly | egrep healthy \
         && echo "::set-output name=state::healthy"
 
