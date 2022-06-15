@@ -1,0 +1,12 @@
+# Web3 Indexer Configs
+
+l2_sudt_type_script_hash="0xdb9896ecb952ab72f4f533d33fd9562fc1333fb6903899e93921efa9f8791408"
+polyjuice_type_script_hash="0x636b89329db092883883ab5256e435ccabeee07b52091a78be22179636affce8"
+rollup_type_hash="0x40d73f0d3c561fcaae330eabc030d8d96a9d0af36d0c5114883658a350cb9e3b"
+eth_account_lock_hash="0x1563080d175bf8ddd44a48e850cecf0c0b4575835756eb5ffd53ad830931b9f9"
+tron_account_lock_hash="0x0bc55f318d738bd1f50e5d950110f0ce5ea2230ec1b62defe1271e06e680476f"
+
+pg_url="postgres://user:password@postgres:5432/web3-indexer"
+
+godwoken_rpc_url="http://gw-mainnet-readonly:8119"
+ws_rpc_url="ws://gw-mainnet-readonly:8219"
