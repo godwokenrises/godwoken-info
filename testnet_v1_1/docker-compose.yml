@@ -73,7 +73,7 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: nervos/godwoken-web3-indexer-prebuilds:v1.1.2-rc1
+    image: nervos/godwoken-web3-indexer-prebuilds:v1.1.3-rc1
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
     working_dir: /var/lib/web3-indexer
