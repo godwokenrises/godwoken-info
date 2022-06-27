@@ -8,7 +8,7 @@
 
 ## Tools
 
-* **Explorer (GwScan)**: TBD
+* **Explorer (GwScan)**: https://v1.gwscan.com
 * **Token Bridge**: TBD
 
 
