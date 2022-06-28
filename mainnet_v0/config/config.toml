@@ -138,7 +138,7 @@ index = '0x0'
 dep_type = 'code'
 
 [block_producer.withdrawal_cell_lock_dep.out_point]
-tx_hash = '0x3d727bd8bb1d87ba79638b63bfbf4c9a4feb9ac5ac5a0b356f3aaf4ccb4d3a1c'
+tx_hash = '0x342dc7b96e663393fa606f05ae1ad8504fa776436d552677356b1023bb174beb'
 index = '0x0'
 
 [block_producer.challenge_cell_lock_dep]
