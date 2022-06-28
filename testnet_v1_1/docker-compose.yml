@@ -15,7 +15,7 @@ services:
 
   gw-readonly:
     container_name: gw-testnet_v1.1-readonly
-    image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.2.0-rc1
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.2.2-rc1
     expose: [8119, 8219]
     depends_on: [ckb-testnet-indexer]
     healthcheck:
