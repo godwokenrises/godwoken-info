@@ -9,7 +9,7 @@
 ## Tools
 
 * **Explorer (GwScan)**: https://v1.gwscan.com
-* **Token Bridge**: TBD
+* **Token Bridge**: https://mainnet.bridge.godwoken.io
 
 
 ## Deployment information
