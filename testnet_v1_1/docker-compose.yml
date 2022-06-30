@@ -26,7 +26,7 @@ services:
     working_dir: /deploy
     volumes:
     - ./chain-data/readonly/:/mnt/
-    - ./gw-testnet_v1.1-config-readonly.toml:/deploy/config.toml
+    - ./gw-testnet_v1-config-readonly.toml:/deploy/config.toml
     - ./db.toml:/deploy/db.toml:ro
     - ./block_producer.key:/deploy/block_producer.key:ro
     - ./healthcheck.sh:/healthcheck.sh:ro

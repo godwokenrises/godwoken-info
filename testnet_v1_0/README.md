@@ -1,4 +1,4 @@
-## Godwoken testnet_v1
+# Godwoken testnet_v1.0 (deprecated)
 
 * [Readonly node config](./gw-testnet_v1-config-readonly.toml)
 * Explorer: https://v1.aggron.gwscan.com
