@@ -4,11 +4,12 @@
 * [Testnet_v1](./testnet_v1_1)
 * [Mainnet_v0](./mainnet_v0)
 
-## Documents
+## Documentation
 
 * [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
 * [How to test your Solidity contracts on Godwoken v1 using Hardhat](https://github.com/nervosnetwork/godwoken-tests)
 * https://docs.godwoken.io
+* [Godwoken CHANGELOG](https://github.com/nervosnetwork/godwoken/blob/develop/CHANGELOG.md)
 
 ## Deprcated Network
 
