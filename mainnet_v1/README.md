@@ -43,5 +43,5 @@ docker-compose up -d gw-readonly
 
 ## Documentation
 
-* [ ] [Difference between mainnet_v0 and mainnet_v1](./README.md)
+* [Difference between mainnet_v0 and mainnet_v1](https://docs.godwoken.io/v0difv1)
 * [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
