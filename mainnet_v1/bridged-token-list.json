@@ -514,6 +514,8 @@
     "erc20Info": {
       "sudtScriptArgs": "0x928123cdb74b08e0f058cc1aaa67b5e8fc9c17612061b433716a61e499f7c5f7",
       "ethAddress": "0x8D5DcCcdE88E2E48e1b91dC58B21AC3248B4E000"
-    }
+    },
+    "UAN": "COOP.gw|gb.ckb",
+    "displayName": "COOP (via Godwoken Bridge from CKB)"
   }
 ]
