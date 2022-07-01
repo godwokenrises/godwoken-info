@@ -216,19 +216,6 @@
   },
   {
     "info": {
-      "decimals": 18,
-      "name": "PAX",
-      "symbol": "PAX"
-    },
-    "erc20Info": {
-      "sudtScriptArgs": "0x160093179296127b43624ab641e2561540e18b1f1b8025d8d6830485201a16a1",
-      "ethAddress": "0xdd17d1d65B105F095e7b3081A2787AAf27087e74"
-    },
-    "UAN": "USDP.ckb|fb.eth",
-    "displayName": "USDP (via Forcebridge from ETH)"
-  },
-  {
-    "info": {
       "decimals": 6,
       "name": "USDC",
       "symbol": "USDC"
