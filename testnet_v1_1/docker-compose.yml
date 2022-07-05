@@ -2,6 +2,9 @@
 version: '3.9'
 
 services:
+  # Note: To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer,
+  # and update [rpc_client] in gw-testnet_v1-config-readonly.toml.
+  # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
   gw-readonly:
     container_name: gw-testnet_v1-readonly
     image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.3.0-rc2
