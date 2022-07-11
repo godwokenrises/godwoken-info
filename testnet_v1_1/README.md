@@ -31,7 +31,8 @@
 * [Godwoken readonly node config](./gw-testnet_v1-config-readonly.toml)
 ```sh
 cd testnet_v1_1
-# Note: It is better to run your own CKB testnet node first.
+# Note: To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer,
+# and update [rpc_client] in gw-testnet_v1-config-readonly.toml.
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
 docker-compose up -d gw-readonly
 

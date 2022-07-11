@@ -1,19 +1,11 @@
 node_mode = 'readonly'
 
-# It is better to run your own CKB testnet node
+# To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
 [rpc_client]
 # Public Nodes (rate_limit: 20 req/s)
-# ckb_url = 'https://testnet.ckbapp.dev/rpc'
-# indexer_url = 'https://testnet.ckbapp.dev/indexer'
-
-# Local Nodes
-indexer_url = 'http://ckb-testnet-indexer:8116'
-# ckb_url = 'http://172.17.0.1:38114'
-
-# Backup Nodes
-ckb_url = 'http://3.83.107.217:8114'
-# indexer_url = 'http://3.83.107.217:8116'
+ckb_url = 'https://testnet.ckbapp.dev/rpc'
+indexer_url = 'https://testnet.ckbapp.dev/indexer'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
@@ -48,6 +40,14 @@ switch_height = 110000
 [[backend_switches.backends]]
 validator_path = '/scripts/godwoken-polyjuice-v1.2.0/validator'
 generator_path = '/scripts/godwoken-polyjuice-v1.2.0/generator'
+validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
+backend_type = 'Polyjuice'
+
+[[backend_switches]]
+switch_height = 180000
+[[backend_switches.backends]]
+validator_path = '/scripts/godwoken-polyjuice-v1.3.0/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.3.0/generator'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
 

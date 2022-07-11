@@ -2,22 +2,13 @@
 version: '3.9'
 
 services:
-  ckb-testnet-indexer:
-    container_name: ckb-testnet-indexer-v0.3.2-202205
-    image: nervos/ckb-indexer:0.3.2
-    volumes:
-    - ../chain-data/ckb-indexer-data:/ckb-testnet-indexer-data
-    expose: [8116]
-    environment:
-    - RUST_LOG=info
-    command: -s /ckb-testnet-indexer-data -c http://3.83.107.217:8114 -l 0.0.0.0:8116
-    # TODO: healthcheck:
-
+  # Note: To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer,
+  # and update [rpc_client] in gw-testnet_v1-config-readonly.toml.
+  # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
   gw-readonly:
-    container_name: gw-testnet_v1.1-readonly
-    image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.2.2-rc1
+    container_name: gw-testnet_v1-readonly
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.3.0-rc2
     expose: [8119, 8219]
-    depends_on: [ckb-testnet-indexer]
     healthcheck:
       test: /healthcheck.sh
       start_period: 10s
@@ -28,7 +19,7 @@ services:
     - ./chain-data/readonly/:/mnt/
     - ./gw-testnet_v1-config-readonly.toml:/deploy/config.toml
     - ./db.toml:/deploy/db.toml:ro
-    - ./block_producer.key:/deploy/block_producer.key:ro
+    - ./zero.key:/deploy/block_producer.key:ro
     - ./healthcheck.sh:/healthcheck.sh:ro
     environment:
     # other log envs: ,gw_generator=debug,gw_chain=debug
@@ -43,9 +34,9 @@ services:
     image: postgres:alpine
     expose: [5432]
     environment:
-      POSTGRES_USER: user
-      POSTGRES_DB: lumos
-      POSTGRES_PASSWORD: password
+      POSTGRES_DB: web3-indexer-db
+      POSTGRES_USER: your_db_user_name
+      POSTGRES_PASSWORD: your_password
     volumes:
     - ./chain-data/postgresql/data:/var/lib/postgresql/data
   
@@ -56,7 +47,7 @@ services:
     - ./chain-data/redis-data:/data
 
   web3:
-    image: nervos/godwoken-web3-prebuilds:v1.1.2-rc1
+    image: nervos/godwoken-web3-prebuilds:v1.3.0-rc1
     healthcheck:
       test: curl http://127.0.0.1:8024 || exit 1
     volumes:
@@ -73,7 +64,7 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: nervos/godwoken-web3-indexer-prebuilds:v1.1.3-rc1
+    image: nervos/godwoken-web3-indexer-prebuilds:v1.3.0-rc1
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
     working_dir: /var/lib/web3-indexer
