@@ -1,0 +1,4 @@
+# see: https://github.com/nervosnetwork/godwoken-web3#start-indexer
+
+godwoken_rpc_url="http://gw-readonly:8119"
+pg_url="postgres://your_db_user_name:your_password@postgres:5432/web3-indexer-db"
