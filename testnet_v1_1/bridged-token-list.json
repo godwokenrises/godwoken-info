@@ -1,0 +1,93 @@
+[
+  {
+    "info": {
+      "decimals": 18,
+      "name": "pCKB",
+      "symbol": "pCKB"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "ethAddress": "0xe05d380839f32bc12fb690aa6fe26b00bd982613"
+    },
+    "UAN": "pCKB.gw|gb.ckb",
+    "displayName": "pCKB (via GodwokenBridge from CKB)"
+  },
+  {
+    "info": {
+      "decimals": 18,
+      "name": "GodwokenToken",
+      "symbol": "GWK"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0x4db75e03349f4f2ec792476035dd1b7376c683130f7e2e74024be2d9ee064511",
+      "ethAddress": "0x2275afe815de66beabe7a2c03005537ab843afb2"
+    },
+    "UAN": "GWK.gw|gb.ckb",
+    "displayName": "GodwokenToken (via GodwokenBridge from CKB)"
+  },
+  {
+    "info": {
+      "decimals": 18,
+      "name": "Godwoken Bridge Test Token",
+      "symbol": "TTKN"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0x58bef38794236b315b7c23fd8132d7f42676228d659b291936e8c6c7ba9f064e",
+      "ethAddress": "0x3c41edd22658b2d6cf0eb26da941d74fe45bea52"
+    },
+    "UAN": "TTKN.gw|gb.ckb",
+    "displayName": "Godwoken Bridge Test Token (via GodwokenBridge from CKB)"
+  },
+  {
+    "info": {
+      "decimals": 18,
+      "name": "DAI",
+      "symbol": "DAI"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0xcb8c7b352d88142993bae0f6a1cfc0ec0deac41e3377a2f7038ff6b103548353",
+      "ethAddress": "0x24a9467fd390d8ca70e848ce8a2e9bbe087eab0e"
+    },
+    "UAN": "DAI.gw|gb.ckb|fb.eth",
+    "displayName": "DAI (via ForceBridge from ETH)"
+  },
+  {
+    "info": {
+      "decimals": 6,
+      "name": "USDC",
+      "symbol": "USDC"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0x5497b6d3d55443d573420ca8e413ee1be8553c6f7a8a6e36bf036bf71f0e3c39",
+      "ethAddress": "0x20FB98bb94aD9B98c0f0089138012E49323d0fEf"
+    },
+    "UAN": "USDC.gw|gb.ckb|fb.eth",
+    "displayName": "USDC (via ForceBridge from ETH)"
+  },
+  {
+    "info": {
+      "decimals": 6,
+      "name": "USDT",
+      "symbol": "USDT"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0xf0a746d4d8df5c18826e11030c659ded11e7218b854f86e6bbdc2af726ad1ec3",
+      "ethAddress": "0x90fc553aBad2b8B6ffe9282e36db52cE6388C648"
+    },
+    "UAN": "USDT.gw|gb.ckb|fb.eth",
+    "displayName": "USDT (via ForceBridge from ETH)"
+  },
+  {
+    "info": {
+      "decimals": 18,
+      "name": "ETH",
+      "symbol": "ETH"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0x1b072aa0ded384067106ea0c43c85bd71bafa5afdb432123511da46b390a4e33",
+      "ethAddress": "0xf0d66bf1260D21fE90329A7A311e84979FEB004d"
+    },
+    "UAN": "ETH.gw|gb.ckb|fb.eth",
+    "displayName": "ETH (via ForceBridge from ETH)"
+  }
+]
