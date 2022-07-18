@@ -7,7 +7,7 @@ indexer_url = 'https://mainnet.ckb.dev/indexer'
 ckb_url = 'https://mainnet.ckb.dev/rpc'
 
 [rpc_server]
-listen = '127.0.0.1:8119'
+listen = '0.0.0.0:8119'
 enable_methods = []
 
 # [p2p_network_config]
@@ -29,8 +29,8 @@ validator_script_type_hash = '0x990027acd7058ec1b45df9d7448c0c5407fc17dde4b9b769
 backend_type = 'Sudt'
 
 [[backend_switches.backends]]
-validator_path = '/scripts/godwoken-polyjuice-v1.2.0/validator'
-generator_path = '/scripts/godwoken-polyjuice-v1.2.0/generator.aot'
+validator_path = '/scripts/godwoken-polyjuice-v1.3.0/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.3.0/generator'
 validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
 backend_type = 'Polyjuice'
 
@@ -148,7 +148,7 @@ max_withdrawals = 100
 max_txs = 1500
 
 [store]
-path = '/mnt/store.db'
+path = '/mnt/mainnet_v1-store.db'
 options_file = '/deploy/db.toml'
 cache_size = 536870912
 
