@@ -596,5 +596,18 @@
     },
     "UAN": "COOP.gw|gb.ckb",
     "displayName": "COOP (via GodwokenBridge from CKB)"
+  },
+  {
+    "info": {
+      "decimals": 18,
+      "name": "StableKoi Token",
+      "symbol": "KOI"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0x68ab5e63d676ce31c56c73d037f38bc35398d4af94b43f8717832c1c81eb251e",
+      "ethAddress": "0x6CA728C1833eee5b3DcdD27F7CBA0AFa5080C58C"
+    },
+    "UAN": "KOI.gw|gb.ckb",
+    "displayName": "KOI (via GodwokenBridge from CKB)"
   }
 ]
