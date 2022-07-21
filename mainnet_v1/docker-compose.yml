@@ -16,7 +16,6 @@ services:
     - ./chain-data/readonly/:/mnt/
     - ./gw-mainnet_v1-config-readonly.toml:/deploy/config.toml
     - ./db.toml:/deploy/db.toml:ro
-    - ./mock.key:/deploy/zero.key:ro
     - ./healthcheck.sh:/healthcheck.sh:ro
     environment:
     # other log envs: ,gw_generator=debug,gw_chain=debug
