@@ -13,5 +13,5 @@
 
 ## Deprcated Network
 
-* [Testnet_v1.0](./testnet_v1_0/) (will be deprecated)
+* [Testnet_v1.0](./testnet_v1_0/) (deprecated)
 * [Testnet_v0](./testnet_v0) (deprecated)
