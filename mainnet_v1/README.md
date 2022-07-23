@@ -27,7 +27,7 @@ curl -X POST 'https://v1.mainnet.godwoken.io/rpc' \
 * **ETH Address Registry ID**: 2
    > `ETH Address Registry` layer2 [contract](https://github.com/nervosnetwork/godwoken-scripts/blob/master/c/contracts/eth_addr_reg.c) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
 
-* [sUDT_ERC20_Proxy contracts](./briged-token-list.json)
+* [sUDT_ERC20_Proxy contracts](./bridged-token-list.json)
 
 
 ## How to run a Godwoken mainnet_v1 readonly node?
