@@ -10,7 +10,7 @@
       "ethAddress": "0x7538C85caE4E4673253fFd2568c1F1b48A71558a"
     },
     "UAN": "pCKB.gw|gb.ckb",
-    "displayName": "pCKB (via GodwokenBridge from CKB)"
+    "displayName": "pCKB (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
@@ -23,7 +23,7 @@
       "ethAddress": "0x893474456C475E738b13DdA824979bF7a355DE39"
     },
     "UAN": "dCKB.gw|gb.ckb",
-    "displayName": "dCKB (via GodwokenBridge from CKB)"
+    "displayName": "dCKB (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
@@ -36,7 +36,7 @@
       "ethAddress": "0x291c64443c15E0632B2c4C742CB2b4b49CA36993"
     },
     "UAN": "TAI.gw|gb.ckb",
-    "displayName": "TAI (via GodwokenBridge from CKB)"
+    "displayName": "TAI (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
@@ -582,7 +582,7 @@
       "ethAddress": "0x885fb612947ccF1C7611894Bd828D388b046fc24"
     },
     "UAN": "YOK.gw|gb.ckb",
-    "displayName": "YOK (via GodwokenBridge from CKB)"
+    "displayName": "YOK (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
@@ -595,7 +595,7 @@
       "ethAddress": "0x8D5DcCcdE88E2E48e1b91dC58B21AC3248B4E000"
     },
     "UAN": "COOP.gw|gb.ckb",
-    "displayName": "COOP (via GodwokenBridge from CKB)"
+    "displayName": "COOP (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
@@ -608,6 +608,6 @@
       "ethAddress": "0x6CA728C1833eee5b3DcdD27F7CBA0AFa5080C58C"
     },
     "UAN": "KOI.gw|gb.ckb",
-    "displayName": "KOI (via GodwokenBridge from CKB)"
+    "displayName": "KOI (via Godwoken Bridge from CKB)"
   }
 ]
