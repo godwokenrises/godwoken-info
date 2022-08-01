@@ -10,7 +10,7 @@
       "ethAddress": "0xe05d380839f32bc12fb690aa6fe26b00bd982613"
     },
     "UAN": "pCKB.gw|gb.ckb",
-    "displayName": "pCKB (via GodwokenBridge from CKB)"
+    "displayName": "pCKB (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
@@ -23,7 +23,7 @@
       "ethAddress": "0x2275afe815de66beabe7a2c03005537ab843afb2"
     },
     "UAN": "GWK.gw|gb.ckb",
-    "displayName": "GodwokenToken (via GodwokenBridge from CKB)"
+    "displayName": "GodwokenToken (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
@@ -36,7 +36,7 @@
       "ethAddress": "0x3c41edd22658b2d6cf0eb26da941d74fe45bea52"
     },
     "UAN": "TTKN.gw|gb.ckb",
-    "displayName": "Godwoken Bridge Test Token (via GodwokenBridge from CKB)"
+    "displayName": "Godwoken Bridge Test Token (via Godwoken Bridge from CKB)"
   },
   {
     "info": {
