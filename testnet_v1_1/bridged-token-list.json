@@ -49,7 +49,7 @@
       "ethAddress": "0x24a9467fd390d8ca70e848ce8a2e9bbe087eab0e"
     },
     "UAN": "DAI.gw|gb.ckb|fb.eth",
-    "displayName": "DAI (via ForceBridge from ETH)"
+    "displayName": "DAI (via Force Bridge from ETH)"
   },
   {
     "info": {
@@ -62,7 +62,7 @@
       "ethAddress": "0x20FB98bb94aD9B98c0f0089138012E49323d0fEf"
     },
     "UAN": "USDC.gw|gb.ckb|fb.eth",
-    "displayName": "USDC (via ForceBridge from ETH)"
+    "displayName": "USDC (via Force Bridge from ETH)"
   },
   {
     "info": {
@@ -75,7 +75,7 @@
       "ethAddress": "0x90fc553aBad2b8B6ffe9282e36db52cE6388C648"
     },
     "UAN": "USDT.gw|gb.ckb|fb.eth",
-    "displayName": "USDT (via ForceBridge from ETH)"
+    "displayName": "USDT (via Force Bridge from ETH)"
   },
   {
     "info": {
@@ -88,6 +88,6 @@
       "ethAddress": "0xf0d66bf1260D21fE90329A7A311e84979FEB004d"
     },
     "UAN": "ETH.gw|gb.ckb|fb.eth",
-    "displayName": "ETH (via ForceBridge from ETH)"
+    "displayName": "ETH (via Force Bridge from ETH)"
   }
 ]
