@@ -6,7 +6,7 @@
  * https://github.com/nervosnetwork/rfcs/pull/335
  */
 
-// Get ForceBridge uan-token-list
+// Get Force Bridge uan-token-list
 let forceBridgeTokenList = await fetch('https://raw.githubusercontent.com/nervosnetwork/force-bridge/20f25902d2f86e54585881b53c62a5ec42da5e1a/configs/uan-token-list.json')
   .then(resp => resp.json())
   .catch(e => {
