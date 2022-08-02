@@ -130,14 +130,6 @@ code_hash = '0x0000000000000000000000000000000000000000000000000000000000000000'
 hash_type = 'data'
 args = '0x'
 
-[block_producer.wallet_config]
-privkey_path = '/deploy/zero.key'
-
-[block_producer.wallet_config.lock]
-code_hash = '0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8'
-hash_type = 'type'
-args = '0x75c62406c6b180d8ffe96400d7f08e6e89d186dc'
-
 [mem_pool]
 execute_l2tx_max_cycles = 100000000
 restore_path = '/mnt/mem_block'
