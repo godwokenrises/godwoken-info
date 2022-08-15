@@ -11,8 +11,7 @@
 * Chain ID: 71394
 * RPC URL: https://mainnet.godwoken.io/rpc
 * Websocket RPC URL: wss://mainnet.godwoken.io/ws
-* Documentation: https://docs.godwoken.io
-* Explorer: https://www.gwscan.com
+* GwScan (Explorer): https://v0.gwscan.com
 
 ## How to run a Godwoken mainnet_v0 readonly node
 ```bash
