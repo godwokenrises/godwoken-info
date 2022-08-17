@@ -38,6 +38,13 @@ cd mainnet_v1
 # Note: It is better to run your own CKB mainnet node first.
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker/#run-a-ckb-mainnet-node
 docker-compose up -d gw-readonly
+
+echo "Wait until Godwoken readonly node is ready to serve"
+watch -n 6 "docker-compose ps && docker-compose logs --tail 10 | egrep 'sync new block'" 
+
+# if the status of gw-readonly service is healthy,
+# then Start Godwoken Web3 and Indexer services
+docker-compose up -d
 ```
 
 
