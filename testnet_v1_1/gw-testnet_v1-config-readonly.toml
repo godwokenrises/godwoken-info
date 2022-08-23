@@ -146,6 +146,9 @@ execute_l2tx_max_cycles = 100000000
 restore_path = '/mnt/mem-pool/mem-block'
 
 [mem_pool.mem_block]
+max_deposits = 100
+max_withdrawals = 100
+max_txs = 1500
 # Introduce max_cycles_limit of a Godwoken block
 # https://github.com/nervosnetwork/godwoken/pull/767
 max_cycles_limit = '1950000000'
