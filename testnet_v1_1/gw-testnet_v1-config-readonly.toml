@@ -161,7 +161,7 @@ sys_recover_account_cycles = 50000
 sys_log_cycles = 50000
 
 [store]
-path = '/mnt/alphanet-store-20220819.db'
+path = '/mnt/store-20220819.db'
 options_file = '/deploy/db.toml'
 cache_size = 536870912
 [store.options]
