@@ -138,6 +138,19 @@ restore_path = '/mnt/mem_block'
 max_deposits = 100
 max_withdrawals = 100
 max_txs = 1500
+# Introduce max_cycles_limit of a Godwoken block
+# https://github.com/nervosnetwork/godwoken/pull/767
+max_cycles_limit = '1950000000'
+[mem_pool.mem_block.syscall_cycles]
+sys_store_cycles = 50000
+sys_load_cycles = 50000
+sys_create_cycles = 50000
+sys_load_account_script_cycles = 50000
+sys_store_data_cycles = 50000
+sys_load_data_cycles = 50000
+sys_get_block_hash_cycles = 50000
+sys_recover_account_cycles = 50000
+sys_log_cycles = 50000
 
 [store]
 path = '/mnt/mainnet_v1-store.db'
