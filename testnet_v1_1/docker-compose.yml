@@ -10,7 +10,7 @@ services:
     image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.5-rc
     expose: [8119, 8219]
     healthcheck:
-      test: /bin/healthcheck.sh
+      test: /bin/gw-healthcheck.sh
       start_period: 10s
       interval: 30s
       retries: 100000
