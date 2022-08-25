@@ -4,10 +4,10 @@ version: '3.9'
 services:
   gw-readonly:
     container_name: gw-mainnet_v1-readonly
-    image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.4.3
+    image: ghcr.io/nervosnetwork/godwoken-prebuilds:1.5.0
     expose: [8119, 8219]
     healthcheck:
-      test: /bin/healthcheck.sh
+      test: /bin/gw-healthcheck.sh
       start_period: 10s
       interval: 30s
       retries: 100
@@ -42,7 +42,7 @@ services:
     - ./chain-data/redis-data:/data
 
   web3:
-    image: nervos/godwoken-web3-prebuilds:v1.5.2-rc1
+    image: nervos/godwoken-web3-prebuilds:v1.6.2
     healthcheck:
       test: curl http://127.0.0.1:8024 || exit 1
     volumes:
@@ -59,7 +59,7 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: nervos/godwoken-web3-indexer-prebuilds:v1.5.2-rc1
+    image: nervos/godwoken-web3-indexer-prebuilds:v1.6.2
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
     working_dir: /var/lib/web3-indexer
