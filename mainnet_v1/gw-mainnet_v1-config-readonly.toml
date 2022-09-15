@@ -15,30 +15,27 @@ enable_methods = []
 
 [[backend_switches]]
 switch_height = 0
-
 [[backend_switches.backends]]
 validator_path = '/scripts/godwoken-scripts/meta-contract-validator'
 generator_path = '/scripts/godwoken-scripts/meta-contract-generator'
 validator_script_type_hash = '0x2c0b586137cb942f92cc3f84f62d77924b560e4088667f6f47012ecfa828e184'
 backend_type = 'Meta'
-
 [[backend_switches.backends]]
 validator_path = '/scripts/godwoken-scripts/sudt-validator'
 generator_path = '/scripts/godwoken-scripts/sudt-generator'
 validator_script_type_hash = '0x990027acd7058ec1b45df9d7448c0c5407fc17dde4b9b769f594d613c8053084'
 backend_type = 'Sudt'
-
-[[backend_switches.backends]]
-validator_path = '/scripts/godwoken-polyjuice-v1.3.0/validator'
-generator_path = '/scripts/godwoken-polyjuice-v1.3.0/generator'
-validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
-backend_type = 'Polyjuice'
-
 [[backend_switches.backends]]
 validator_path = '/scripts/godwoken-scripts/eth-addr-reg-validator'
 generator_path = '/scripts/godwoken-scripts/eth-addr-reg-generator'
 validator_script_type_hash = '0xc55c5ede907d13ac1e744cff8ce4386b9dc5aad905d8f3badfd9419efe49eeb2'
 backend_type = 'EthAddrReg'
+[[backend_switches.backends]]
+# https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.1
+validator_path = '/scripts/godwoken-polyjuice/validator'
+generator_path = '/scripts/godwoken-polyjuice/generator'
+validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
+backend_type = 'Polyjuice'
 
 [genesis]
 timestamp = 1655830128000
