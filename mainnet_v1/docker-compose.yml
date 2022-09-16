@@ -10,7 +10,8 @@ services:
       test: /bin/gw-healthcheck.sh
       start_period: 10s
       interval: 30s
-      retries: 100
+      # It takes a long time to synchronize for the first time.
+      retries: 100000
     working_dir: /deploy
     volumes:
     - ./chain-data/readonly/:/mnt/
