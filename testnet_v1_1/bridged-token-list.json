@@ -41,28 +41,28 @@
   {
     "info": {
       "decimals": 18,
+      "name": "ETH",
+      "symbol": "ETH"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0x9cfc1339d0b730258d517db6fbf29d091e0aec807eb8b79d99ecbb86bfac3574",
+      "ethAddress": "0x8375e0901419481Ad87eC8A2834F1A85f6D19143"
+    },
+    "UAN": "ETH.gw|gb.ckb|fb.eth",
+    "displayName": "ETH (via Force Bridge from ETH)"
+  },
+  {
+    "info": {
+      "decimals": 18,
       "name": "DAI",
       "symbol": "DAI"
     },
     "erc20Info": {
-      "sudtScriptArgs": "0xcb8c7b352d88142993bae0f6a1cfc0ec0deac41e3377a2f7038ff6b103548353",
-      "ethAddress": "0x24a9467fd390d8ca70e848ce8a2e9bbe087eab0e"
+      "sudtScriptArgs": "0x3f818bfd96df3930b3b7c9704fdb3b4f7216f80bd87f098f7887c000b7ca0e71",
+      "ethAddress": "0xd4d88E331F24DBc5a347cF351857676D62Eb226D"
     },
     "UAN": "DAI.gw|gb.ckb|fb.eth",
     "displayName": "DAI (via Force Bridge from ETH)"
-  },
-  {
-    "info": {
-      "decimals": 6,
-      "name": "USDC",
-      "symbol": "USDC"
-    },
-    "erc20Info": {
-      "sudtScriptArgs": "0x5497b6d3d55443d573420ca8e413ee1be8553c6f7a8a6e36bf036bf71f0e3c39",
-      "ethAddress": "0x20FB98bb94aD9B98c0f0089138012E49323d0fEf"
-    },
-    "UAN": "USDC.gw|gb.ckb|fb.eth",
-    "displayName": "USDC (via Force Bridge from ETH)"
   },
   {
     "info": {
@@ -71,23 +71,36 @@
       "symbol": "USDT"
     },
     "erc20Info": {
-      "sudtScriptArgs": "0xf0a746d4d8df5c18826e11030c659ded11e7218b854f86e6bbdc2af726ad1ec3",
-      "ethAddress": "0x90fc553aBad2b8B6ffe9282e36db52cE6388C648"
+      "sudtScriptArgs": "0x9d220523b875864e7a957e87e2f11ce234db56e70087a33cb566e48cd9e43f30",
+      "ethAddress": "0x8c4aa4Ad3591f391616a0401f3B621F568cC30CD"
     },
     "UAN": "USDT.gw|gb.ckb|fb.eth",
     "displayName": "USDT (via Force Bridge from ETH)"
   },
   {
     "info": {
-      "decimals": 18,
-      "name": "ETH",
-      "symbol": "ETH"
+      "decimals": 6,
+      "name": "USDC",
+      "symbol": "USDC"
     },
     "erc20Info": {
-      "sudtScriptArgs": "0x1b072aa0ded384067106ea0c43c85bd71bafa5afdb432123511da46b390a4e33",
-      "ethAddress": "0xf0d66bf1260D21fE90329A7A311e84979FEB004d"
+      "sudtScriptArgs": "0xc07de96b0014480edd008dd529120fe72a2ae809bfab4394aa5b96819e96e64e",
+      "ethAddress": "0x0ad79F7D32A1E54E9bfB3fCe4847e4718b7820Af"
     },
-    "UAN": "ETH.gw|gb.ckb|fb.eth",
-    "displayName": "ETH (via Force Bridge from ETH)"
+    "UAN": "USDC.gw|gb.ckb|fb.eth",
+    "displayName": "USDC (via Force Bridge from ETH)"
+  },
+  {
+    "info": {
+      "decimals": 8,
+      "name": "WBTC",
+      "symbol": "WBTC"
+    },
+    "erc20Info": {
+      "sudtScriptArgs": "0xf7f761732d4c0957851a720bd54124564885e977bccf655e8e4580a3a0e8bdd6",
+      "ethAddress": "0x39C08260068533be2414cD504aD293c90F7302BF"
+    },
+    "UAN": "WBTC.gw|gb.ckb|fb.eth",
+    "displayName": "WBTC (via Force Bridge from ETH)"
   }
 ]
