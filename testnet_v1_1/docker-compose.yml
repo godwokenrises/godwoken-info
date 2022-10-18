@@ -46,7 +46,7 @@ services:
     - ./chain-data/redis-data:/data
 
   web3:
-    image: nervos/godwoken-web3-prebuilds:v1.8.1
+    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.8.5
     healthcheck:
       test: curl http://127.0.0.1:8024 || exit 1
     volumes:
@@ -63,7 +63,7 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: nervos/godwoken-web3-indexer-prebuilds:v1.8.1
+    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.8.5
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
     working_dir: /var/lib/web3-indexer
