@@ -58,7 +58,7 @@ switch_height = 380000
 # https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.1
 [[backend_switches.backends]]
 validator_path = '/scripts/godwoken-polyjuice/validator'
-generator_path = '/scripts/godwoken-polyjuice/generator'
+generator_path = '/scripts/godwoken-polyjuice/generator_log'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
 
