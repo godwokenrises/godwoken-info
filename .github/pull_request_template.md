@@ -1,3 +1,6 @@
+## Noteable Changes
+1. pick some important changes from release notes
+
 ## Release notes
 - Godwoken Web3
    https://github.com/nervosnetwork/godwoken-web3/releases
@@ -9,14 +12,10 @@
    https://github.com/nervosnetwork/godwoken-polyjuice/releases
 
 
-## Changes
-1.
-2.
-
 ## Changed Configs
-1.
-2.
+1. refer to the changed configuration files
 
+<!--
 ## Inspect the component versions in the image
 ```bash
 docker inspect ghcr.io/nervosnetwork/godwoken-prebuilds:1.6.0 | egrep ref.component
@@ -31,3 +30,4 @@ docker inspect ghcr.io/nervosnetwork/godwoken-prebuilds:1.6.0 | egrep ref.compon
     "ref.component.godwoken-scripts-sha1": "430247efc62aed3e4b9b3661ade6adead0dfcbfc",
     "ref.component.godwoken-sha1": "0ae1196976df620740ed3834f4667a722b4b65c7",
 ```
+-->
