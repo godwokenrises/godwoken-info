@@ -37,23 +37,34 @@ generator_path = '/scripts/godwoken-polyjuice-v1.4.1/generator'
 validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
 backend_type = 'Polyjuice'
 
-[[backend_switches]]
-switch_height = 186750
-[[backend_switches.backends]]
-# https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.2
-validator_path = '/scripts/godwoken-polyjuice-v1.4.2/validator'
-generator_path = '/scripts/godwoken-polyjuice-v1.4.2/generator'
-validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
-backend_type = 'Polyjuice'
+# TODO: remove the useless backend version
+# [[backend_switches]]
+# switch_height = 186750
+# [[backend_switches.backends]]
+# # https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.2
+# validator_path = '/scripts/godwoken-polyjuice-v1.4.2/validator'
+# generator_path = '/scripts/godwoken-polyjuice-v1.4.2/generator'
+# validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
+# backend_type = 'Polyjuice'
 
 [[backend_switches]]
 switch_height = 186758
 [[backend_switches.backends]]
 # https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.4
-validator_path = '/scripts/godwoken-polyjuice/validator'
-generator_path = '/scripts/godwoken-polyjuice/generator'
+validator_path = '/scripts/godwoken-polyjuice-v1.4.4/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.4.4/generator'
 validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
 backend_type = 'Polyjuice'
+
+[[backend_switches]]
+switch_height = 204000
+[[backend_switches.backends]]
+# https://github.com/godwokenrises/godwoken-polyjuice/releases/tag/1.4.5
+validator_path = '/scripts/godwoken-polyjuice-v1.4.5/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.4.5/generator'
+validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
+backend_type = 'Polyjuice'
+
 
 [genesis]
 timestamp = 1655830128000
