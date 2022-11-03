@@ -157,7 +157,7 @@ hash_type = 'data'
 args = '0x'
 
 [mem_pool]
-execute_l2tx_max_cycles = 150000000
+execute_l2tx_max_cycles = 3000000000
 restore_path = '/mnt/mem_block'
 
 [mem_pool.mem_block]
@@ -167,16 +167,10 @@ max_txs = 1500
 # Introduce max_cycles_limit of a Godwoken block
 # https://github.com/nervosnetwork/godwoken/pull/767
 max_cycles_limit = '1950000000'
-[mem_pool.mem_block.syscall_cycles]
-sys_store_cycles = 50000
-sys_load_cycles = 5000
-sys_create_cycles = 50000
-sys_load_account_script_cycles = 5000
-sys_store_data_cycles = 50000
-sys_load_data_cycles = 5000
-sys_get_block_hash_cycles = 50000
-sys_recover_account_cycles = 50000
-sys_log_cycles = 50000
+
+# [mem_pool.mem_block.syscall_cycles]
+# Default SyscallCyclesConfig:
+# https://github.com/godwokenrises/godwoken/blob/v1.7.0/crates/config/src/config.rs#L579-L599
 
 [store]
 path = '/mnt/mainnet_v1-store.db'
