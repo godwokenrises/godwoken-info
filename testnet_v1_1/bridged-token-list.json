@@ -19,7 +19,7 @@
       "symbol": "GWK"
     },
     "erc20Info": {
-      "sudtScriptArgs": "0x4db75e03349f4f2ec792476035dd1b7376c683130f7e2e74024be2d9ee064511",
+      "sudtScriptArgs": "0x5c7253696786b9eddd34e4f6b6e478ec5742bd36569ec60c1d0487480ba4f9e3",
       "ethAddress": "0x2275afe815de66beabe7a2c03005537ab843afb2"
     },
     "UAN": "GWK.gw|gb.ckb",
