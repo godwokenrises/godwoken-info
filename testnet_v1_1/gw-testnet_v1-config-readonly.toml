@@ -10,66 +10,78 @@ indexer_url = 'https://testnet.ckbapp.dev/indexer'
 [rpc_server]
 listen = '0.0.0.0:8119'
 enable_methods = []
-err_receipt_ws_listen = '0.0.0.0:8219'
 
-[[backend_switches]]
-switch_height = 0
-[[backend_switches.backends]]
+[fork]
+increase_max_l2_tx_cycles_to_500m = 825000
+
+[[fork.backend_forks]]
+fork_height = 0
+[[fork.backend_forks.backends]]
 validator_path = '/scripts/godwoken-scripts/meta-contract-validator'
 generator_path = '/scripts/godwoken-scripts/meta-contract-generator'
 validator_script_type_hash = '0x37b25df86ca495856af98dff506e49f2380d673b0874e13d29f7197712d735e8'
 backend_type = 'Meta'
-[[backend_switches.backends]]
+[[fork.backend_forks.backends]]
 validator_path = '/scripts/godwoken-scripts/sudt-validator'
 generator_path = '/scripts/godwoken-scripts/sudt-generator'
 validator_script_type_hash = '0xb6176a6170ea33f8468d61f934c45c57d29cdc775bcd3ecaaec183f04b9f33d9'
 backend_type = 'Sudt'
-[[backend_switches.backends]]
+[[fork.backend_forks.backends]]
 validator_path = '/scripts/godwoken-scripts/eth-addr-reg-validator'
 generator_path = '/scripts/godwoken-scripts/eth-addr-reg-generator'
 validator_script_type_hash = '0xa30dcbb83ebe571f49122d8d1ce4537679ebf511261c8ffaaa6679bf9fdea3a4'
 backend_type = 'EthAddrReg'
-[[backend_switches.backends]]
+[[fork.backend_forks.backends]]
 validator_path = '/scripts/godwoken-polyjuice-v1.1.5-beta/validator'
 generator_path = '/scripts/godwoken-polyjuice-v1.1.5-beta/generator'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
 
-[[backend_switches]]
-switch_height = 110000
-[[backend_switches.backends]]
+[[fork.backend_forks]]
+fork_height = 110000
+[[fork.backend_forks.backends]]
 validator_path = '/scripts/godwoken-polyjuice-v1.2.0/validator'
 generator_path = '/scripts/godwoken-polyjuice-v1.2.0/generator'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
 
-[[backend_switches]]
-switch_height = 180000
+[[fork.backend_forks]]
+fork_height = 180000
 # Polyjuice v1.4.0 is backward compatible with Polyjuice v1.3
 # https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.0
-[[backend_switches.backends]]
+[[fork.backend_forks.backends]]
 validator_path = '/scripts/godwoken-polyjuice-v1.4.0/validator'
 generator_path = '/scripts/godwoken-polyjuice-v1.4.0/generator'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
 
-[[backend_switches]]
-switch_height = 380000
+[[fork.backend_forks]]
+fork_height = 380000
 # https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.1
-[[backend_switches.backends]]
+[[fork.backend_forks.backends]]
 validator_path = '/scripts/godwoken-polyjuice-v1.4.1/validator'
 generator_path = '/scripts/godwoken-polyjuice-v1.4.1/generator_log'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
 
-[[backend_switches]]
-switch_height = 630000
+[[fork.backend_forks]]
+fork_height = 630000
 # https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.4.5
-[[backend_switches.backends]]
-validator_path = '/scripts/godwoken-polyjuice/validator'
-generator_path = '/scripts/godwoken-polyjuice/generator'
+[[fork.backend_forks.backends]]
+validator_path = '/scripts/godwoken-polyjuice-v1.4.5/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.4.5/generator'
 validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
 backend_type = 'Polyjuice'
+
+[[fork.backend_forks]]
+fork_height = 825000
+# https://github.com/nervosnetwork/godwoken-polyjuice/releases/tag/1.5.0
+[[fork.backend_forks.backends]]
+validator_path = '/scripts/godwoken-polyjuice-v1.5.0/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.5.0/generator'
+validator_script_type_hash = '0x1629b04b49ded9e5747481f985b11cba6cdd4ffc167971a585e96729455ca736'
+backend_type = 'Polyjuice'
+
 
 [genesis]
 timestamp = 1651979802446
@@ -164,7 +176,6 @@ args = '0x'
 [mem_pool]
 execute_l2tx_max_cycles = 100000000
 restore_path = '/mnt/mem-pool/mem-block'
-
 [mem_pool.mem_block]
 max_deposits = 50
 max_withdrawals = 50
