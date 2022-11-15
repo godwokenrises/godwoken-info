@@ -151,7 +151,7 @@ hash_type = 'data'
 args = '0x'
 
 [mem_pool]
-execute_l2tx_max_cycles = 500000000
+execute_l2tx_max_cycles = 3000000000
 restore_path = '/mnt/mem_block'
 
 [mem_pool.mem_block]
