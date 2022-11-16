@@ -1,8 +1,8 @@
 ## Godwoken testnet_v1
 
 ## Godwoken Web3 RPC
-* **RPC URL**: https://godwoken-testnet-v1.ckbapp.dev
-* **WebSocket**: wss://godwoken-testnet-v1.ckbapp.dev/ws
+* **RPC URL**: https://v1.testnet.godwoken.io/rpc
+* **WebSocket**: wss://v1.testnet.godwoken.io/ws
 
 
 ## Tools
@@ -14,7 +14,7 @@
 ## Deployment information
 * **Chain ID**: 71401
 ```bash
-> curl -X POST 'https://godwoken-testnet-v1.ckbapp.dev' \
+> curl -X POST 'https://v1.testnet.godwoken.io/rpc' \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"eth_chainId","params": [],"id":1}'
 
