@@ -76,6 +76,7 @@ services:
     command: [ "gw-web3-indexer" ]
     environment:
     - RUST_LOG=info
+    restart: unless-stopped
     depends_on:
       web3:
         condition: service_healthy
