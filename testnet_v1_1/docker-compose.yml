@@ -1,6 +1,10 @@
 # Requires docker-compose >= 1.29.0
 version: '3.9'
 
+volumes:
+  testnet_v1-web3-indexer-data:
+  testnet_v1-redis-data:
+
 services:
   # Note: To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer,
   # and update [rpc_client] in gw-testnet_v1-config-readonly.toml.
@@ -37,13 +41,13 @@ services:
       POSTGRES_USER: your_db_user_name
       POSTGRES_PASSWORD: your_password
     volumes:
-    - ./chain-data/postgresql/data:/var/lib/postgresql/data
+    - testnet_v1-web3-indexer-data:/var/lib/postgresql/data
   
   redis:
     image: redis:bullseye
     user: redis:redis
     volumes:
-    - ./chain-data/redis-data:/data
+    - testnet_v1-redis-data:/data
 
   web3:
     image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.9.0-rc2
