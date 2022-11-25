@@ -94,7 +94,7 @@ jobs:
         script: |
           const { getTipBlockNumber } = require("./godwoken-tests/scripts/helper");
           const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-          const PUBLIC_WEB3_RPC='https://godwoken-testnet-v1.ckbapp.dev';
+          const PUBLIC_WEB3_RPC='https://v1.testnet.godwoken.io/rpc';
           let isSyncedToTip = false;
           while (!isSyncedToTip) {
             await sleep(6666);

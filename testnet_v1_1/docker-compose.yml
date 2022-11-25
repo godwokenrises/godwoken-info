@@ -46,7 +46,7 @@ services:
     - ./chain-data/redis-data:/data
 
   web3:
-    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.8.6
+    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.9.0-rc2
     healthcheck:
       test: curl http://127.0.0.1:8024 || exit 1
     volumes:
@@ -63,9 +63,15 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.8.6
+    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.9.0-rc2
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
+    - ./chain-data/logs:/var/lib/web3-indexer/logs
+    # How to re-sync web3-indexer at /var/lib/web3-indexer/ ?
+    # ➜ nohup gw-web3-indexer update <startBlock> <endBlock> > logs/web3-indexer-update.log 2>&1 &
+    # or
+    # ➜ nohup gw-web3-indexer update > logs/web3-indexer-update.log 2>&1 &
+    # refer to: https://github.com/godwokenrises/godwoken-web3/blob/main/README.md#update-blocks
     working_dir: /var/lib/web3-indexer
     command: [ "gw-web3-indexer" ]
     environment:
