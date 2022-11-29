@@ -1,10 +1,14 @@
 # Requires docker-compose >= 1.29.0
 version: '3.9'
 
+volumes:
+  mainnet_v1-web3-indexer-data:
+  mainnet_v1-redis-data:
+
 services:
   gw-readonly:
     container_name: gw-mainnet_v1-readonly
-    image: ghcr.io/godwokenrises/godwoken-prebuilds:1.7.1-poly1.5.0
+    image: ghcr.io/godwokenrises/godwoken-prebuilds:1.7.3
     expose: [8119, 8219]
     healthcheck:
       test: /bin/gw-healthcheck.sh
@@ -34,16 +38,16 @@ services:
       POSTGRES_USER: your_db_user_name
       POSTGRES_PASSWORD: your_password
     volumes:
-    - ./chain-data/postgresql/data:/var/lib/postgresql/data
+    - mainnet_v1-web3-indexer-data:/var/lib/postgresql/data
   
   redis:
     image: redis:bullseye
     user: redis:redis
     volumes:
-    - ./chain-data/redis-data:/data
+    - mainnet_v1-redis-data:/data
 
   web3:
-    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.8.6
+    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.9.0
     healthcheck:
       test: curl http://127.0.0.1:8024 || exit 1
     volumes:
@@ -60,9 +64,15 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.8.6
+    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.9.0
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
+    - ./chain-data/logs:/var/lib/web3-indexer/logs
+    # How te-sync web3-indexer at /var/lib/web3-indexer/ ?
+    # ➜ nohup gw-web3-indexer update <startBlock> <endBlock> > logs/web3-indexer-update.log 2>&1 &
+    # or
+    # ➜ nohup gw-web3-indexer update > logs/web3-indexer-update.log 2>&1 &
+    # refer to: https://github.com/godwokenrises/godwoken-web3/blob/main/README.md#update-blocks
     working_dir: /var/lib/web3-indexer
     command: [ "gw-web3-indexer" ]
     environment:
