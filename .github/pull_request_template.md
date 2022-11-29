@@ -1,4 +1,4 @@
-## Noteable Changes
+## Notable Changes
 1. pick some important changes from release notes
 
 ## Release notes
