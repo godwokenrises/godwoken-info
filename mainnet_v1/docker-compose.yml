@@ -75,6 +75,7 @@ services:
     # refer to: https://github.com/godwokenrises/godwoken-web3/blob/main/README.md#update-blocks
     working_dir: /var/lib/web3-indexer
     command: [ "gw-web3-indexer" ]
+    restart: unless-stopped
     environment:
     - RUST_LOG=info
     depends_on:
