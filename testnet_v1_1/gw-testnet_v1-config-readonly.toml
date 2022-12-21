@@ -2,6 +2,11 @@ node_mode = 'readonly'
 
 # To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
+[p2p_network_config]
+# The domain name here should resolve to the IPv4 address of the full node.
+# And obviously readonly nodes need to be able to reach the TCP 8999 port of the full node.
+dial = ["/dns4/testnet.p2p.godwoken.io/tcp/8999"]
+
 [rpc_client]
 # Public Nodes (rate_limit: 20 req/s)
 ckb_url = 'https://testnet.ckbapp.dev/rpc'
