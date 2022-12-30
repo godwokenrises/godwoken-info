@@ -10,8 +10,8 @@ ckb_url = 'https://mainnet.ckb.dev/rpc'
 listen = '0.0.0.0:8119'
 enable_methods = []
 
-# [p2p_network_config]
-# dial = ["/dns4/godwoken/tcp/9999"]
+[p2p_network_config]
+dial = ["/dns4/mainnet.p2p.godwoken.io/tcp/9999"]
 
 
 [fork]
