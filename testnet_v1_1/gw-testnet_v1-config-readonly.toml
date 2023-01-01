@@ -5,12 +5,18 @@ node_mode = 'readonly'
 # And obviously readonly nodes need to be able to reach the TCP 8999 port of the full node.
 dial = ["/dns4/testnet.p2p.godwoken.io/tcp/8999"]
 
+# To achieve higher sync speed, please run your own ckb-testnet-node
+# see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
+# Cmd `ckb run --indexer` could enable built-in indexer of a ckb node.
 [rpc_client]
 # Public Nodes (rate_limit: 20 req/s)
-# To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer
-# see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
 ckb_url = 'https://testnet.ckbapp.dev/rpc'
-indexer_url = 'https://testnet.ckbapp.dev/indexer'
+
+# If a CKB indexer RPC url is explicitly specified, we assume that we are
+# connecting to a standalone indexer (i.e. we use get_tip).
+# Otherwise we just use CKB RPC url and assume that we are connecting to CKB
+# builtin indexer (i.e. we use get_indexer_tip).
+# indexer_url = 'standalone ckb-indexer, optional'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
