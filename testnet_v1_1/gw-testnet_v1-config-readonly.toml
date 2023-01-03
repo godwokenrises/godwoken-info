@@ -1,11 +1,22 @@
 node_mode = 'readonly'
 
-# To achieve higher sync speed, please run your own ckb-testnet-node and ckb-testnet-indexer
+[p2p_network_config]
+# The domain name here should resolve to the IPv4 address of the full node.
+# And obviously readonly nodes need to be able to reach the TCP 8999 port of the full node.
+dial = ["/dns4/testnet.p2p.godwoken.io/tcp/8999"]
+
+# To achieve higher sync speed, please run your own ckb-testnet-node
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
+# Cmd `ckb run --indexer` could enable built-in indexer of a ckb node.
 [rpc_client]
 # Public Nodes (rate_limit: 20 req/s)
 ckb_url = 'https://testnet.ckbapp.dev/rpc'
-indexer_url = 'https://testnet.ckbapp.dev/indexer'
+
+# If a CKB indexer RPC url is explicitly specified, we assume that we are
+# connecting to a standalone indexer (i.e. we use get_tip).
+# Otherwise we just use CKB RPC url and assume that we are connecting to CKB
+# builtin indexer (i.e. we use get_indexer_tip).
+# indexer_url = 'standalone ckb-indexer, optional'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
@@ -17,18 +28,18 @@ increase_max_l2_tx_cycles_to_500m = 825000
 [[fork.backend_forks]]
 fork_height = 0
 [[fork.backend_forks.backends]]
-validator_path = '/scripts/godwoken-scripts/meta-contract-validator'
-generator_path = '/scripts/godwoken-scripts/meta-contract-generator'
+validator_path = '/scripts/gwos-v1.3.0-rc1/meta-contract-validator'
+generator_path = '/scripts/gwos-v1.3.0-rc1/meta-contract-generator'
 validator_script_type_hash = '0x37b25df86ca495856af98dff506e49f2380d673b0874e13d29f7197712d735e8'
 backend_type = 'Meta'
 [[fork.backend_forks.backends]]
-validator_path = '/scripts/godwoken-scripts/sudt-validator'
-generator_path = '/scripts/godwoken-scripts/sudt-generator'
+validator_path = '/scripts/gwos-v1.3.0-rc1/sudt-validator'
+generator_path = '/scripts/gwos-v1.3.0-rc1/sudt-generator'
 validator_script_type_hash = '0xb6176a6170ea33f8468d61f934c45c57d29cdc775bcd3ecaaec183f04b9f33d9'
 backend_type = 'Sudt'
 [[fork.backend_forks.backends]]
-validator_path = '/scripts/godwoken-scripts/eth-addr-reg-validator'
-generator_path = '/scripts/godwoken-scripts/eth-addr-reg-generator'
+validator_path = '/scripts/gwos-v1.3.0-rc1/eth-addr-reg-validator'
+generator_path = '/scripts/gwos-v1.3.0-rc1/eth-addr-reg-generator'
 validator_script_type_hash = '0xa30dcbb83ebe571f49122d8d1ce4537679ebf511261c8ffaaa6679bf9fdea3a4'
 backend_type = 'EthAddrReg'
 [[fork.backend_forks.backends]]
@@ -146,7 +157,7 @@ args = '0x86c7429247beba7ddd6e4361bcdfc0510b0b644131e2afb7e486375249a01802'
 
 [debug]
 output_l1_tx_cycles = true
-expected_l1_tx_upper_bound_cycles = 70000000
+expected_l1_tx_upper_bound_cycles = 350000000
 debug_tx_dump_path = '/mnt/debug-tx-dump'
 enable_debug_rpc = false
 
