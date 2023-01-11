@@ -10,6 +10,11 @@ ckb_url = 'https://mainnet.ckb.dev/rpc'
 listen = '0.0.0.0:8119'
 enable_methods = []
 
+# The P2P syncing feature could improve the experience of an external Godwoken readonly node.
+# An external Godwoken readonly node can receive layer-2 block sync messages from fullnode through
+# the configured p2p_network.
+#
+# see also: https://github.com/godwokenrises/godwoken/blob/develop/docs/p2p_sync.md
 [p2p_network_config]
 dial = ["/dns4/mainnet.p2p.godwoken.io/tcp/9999"]
 
