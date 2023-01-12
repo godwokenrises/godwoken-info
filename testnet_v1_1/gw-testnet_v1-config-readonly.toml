@@ -1,5 +1,10 @@
 node_mode = 'readonly'
 
+# The P2P syncing feature could improve the experience of an external Godwoken readonly node.
+# An external Godwoken readonly node can receive layer-2 block sync messages from fullnode through
+# the configured p2p_network.
+#
+# see also: https://github.com/godwokenrises/godwoken/blob/develop/docs/p2p_sync.md
 [p2p_network_config]
 # The domain name here should resolve to the IPv4 address of the full node.
 # And obviously readonly nodes need to be able to reach the TCP 8999 port of the full node.

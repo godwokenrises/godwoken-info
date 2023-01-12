@@ -3,15 +3,20 @@ node_mode = 'readonly'
 # Note: It is better to run your own CKB mainnet node.
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker/#run-a-ckb-mainnet-node
 [rpc_client]
-indexer_url = 'https://mainnet.ckb.dev/indexer'
+indexer_url = 'CKB_STANDALONE_INDEXER'
 ckb_url = 'https://mainnet.ckb.dev/rpc'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
 enable_methods = []
 
-# [p2p_network_config]
-# dial = ["/dns4/godwoken/tcp/9999"]
+# The P2P syncing feature could improve the experience of an external Godwoken readonly node.
+# An external Godwoken readonly node can receive layer-2 block sync messages from fullnode through
+# the configured p2p_network.
+#
+# see also: https://github.com/godwokenrises/godwoken/blob/develop/docs/p2p_sync.md
+[p2p_network_config]
+dial = ["/dns4/mainnet.p2p.godwoken.io/tcp/9999"]
 
 
 [fork]
@@ -56,6 +61,14 @@ fork_height = 233000
 # https://github.com/godwokenrises/godwoken-polyjuice/releases/tag/1.5.0
 validator_path = '/scripts/godwoken-polyjuice-v1.5.0/validator'
 generator_path = '/scripts/godwoken-polyjuice-v1.5.0/generator'
+validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
+backend_type = 'Polyjuice'
+
+[[fork.backend_forks]]
+fork_height = 304440
+[[fork.backend_forks.backends]]
+validator_path = '/scripts/godwoken-polyjuice-v1.5.1/validator'
+generator_path = '/scripts/godwoken-polyjuice-v1.5.1/generator'
 validator_script_type_hash = '0x83d5d8841518e8db686909d27c821398491f475ed5f1cd392c36e83f4252c4ac'
 backend_type = 'Polyjuice'
 
