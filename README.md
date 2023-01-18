@@ -1,15 +1,17 @@
-## [Godwoken](https://github.com/nervosnetwork/godwoken) Public Network
+## [Godwoken](https://github.com/godwokenrises/godwoken) Public Network
 
 * [Mainnet_v1](./mainnet_v1)
 * [Testnet_v1](./testnet_v1_1)
 * [Mainnet_v0](./mainnet_v0)
 
-## Documentation
+## Network Status
 
-* [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
-* [How to test your Solidity contracts on Godwoken v1 using Hardhat](https://github.com/nervosnetwork/godwoken-tests)
-* https://docs.godwoken.io
-* [Godwoken CHANGELOG](https://github.com/nervosnetwork/godwoken/blob/develop/CHANGELOG.md)
+- https://godwoken.statuspage.io
+
+## Documentation - https://docs.godwoken.io
+
+* [How to test your Solidity contracts on Godwoken v1 using Hardhat](https://github.com/godwokenrises/godwoken-tests)
+* [Godwoken CHANGELOG](https://github.com/godwokenrises/godwoken/blob/develop/CHANGELOG.md)
 
 ## Deprcated Network
 
