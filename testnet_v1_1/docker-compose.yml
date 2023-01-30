@@ -27,7 +27,11 @@ services:
     environment:
     # other log envs: ,gw_generator=debug,gw_chain=debug
     - RUST_LOG=info
-    command: godwoken
+    command: |
+      bash -c 'set -ex
+        godwoken rewind-to-last-valid-block --config-path /deploy/config.toml
+        godwoken run -c /deploy/config.toml
+      '
     deploy:
       restart_policy:
         condition: on-failure
