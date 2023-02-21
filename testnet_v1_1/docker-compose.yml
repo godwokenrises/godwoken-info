@@ -60,7 +60,7 @@ services:
     - testnet_v1-redis-data:/data
 
   web3:
-    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.12.0-rc1
+    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:1.12-rc
     healthcheck:
       test: curl http://127.0.0.1:8024 || exit 1
     volumes:
@@ -77,7 +77,7 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.12.0-rc1
+    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:1.12-rc
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
     - ./chain-data/logs:/var/lib/web3-indexer/logs
