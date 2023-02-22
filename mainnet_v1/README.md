@@ -25,7 +25,7 @@ curl -X POST 'https://v1.mainnet.godwoken.io/rpc' \
 ```
 
 * **ETH Address Registry ID**: 2
-   > `ETH Address Registry` layer2 [contract](https://github.com/nervosnetwork/godwoken-scripts/blob/master/c/contracts/eth_addr_reg.c) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
+   > `ETH Address Registry` layer2 [contract](https://github.com/godwokenrises/godwoken/blob/develop/gwos/c/contracts/eth_addr_reg.c) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
 
 * [sUDT_ERC20_Proxy contracts](./bridged-token-list.json)
 
@@ -48,7 +48,6 @@ docker-compose up -d
 ```
 
 
-## Documentation
+## Documentation - https://docs.godwoken.io
 
-* [Difference between mainnet_v0 and mainnet_v1](https://docs.godwoken.io/v0difv1)
-* [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
+* [Difference between mainnet_v0 and mainnet_v1](https://docs.godwoken.io/gwchangelog/v0difv1)

@@ -23,7 +23,7 @@
 ```
 
 * **ETH Address Registry ID**: 2
-> `ETH Address Registry` layer2 [contract](https://github.com/nervosnetwork/godwoken-scripts/blob/master/c/contracts/eth_addr_reg.c) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
+> `ETH Address Registry` layer2 [contract](https://github.com/godwokenrises/godwoken/blob/develop/gwos/c/contracts/eth_addr_reg.c) introduces two-ways mappings between `eth_address` and `gw_script_hash`.
 
 
 ## How to run a Godwoken testnet_v1 readonly node?
@@ -45,7 +45,6 @@ docker-compose up -d
 ```
 
 
-## Documentation
+## Documentation - https://docs.godwoken.io
 
-* [Getting Started with Godwoken](https://startwithnervos.com/godwoken)
 * [How to test your Solidity contracts on Godwoken v1 using Hardhat](https://github.com/nervosnetwork/godwoken-tests)
