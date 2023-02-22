@@ -35,8 +35,9 @@ services:
         # some bad blocks accidentally due to e.g. version/configuration differences.
         # see also: https://github.com/godwokenrises/godwoken/pull/832
         # godwoken rewind-to-last-valid-block --config-path /deploy/config.toml
-        #migrated execute
-        #godwoken run -c /deploy/config.toml
+
+        # Run Godwoken
+        godwoken run -c /deploy/config.toml
       '
     deploy:
       restart_policy:
