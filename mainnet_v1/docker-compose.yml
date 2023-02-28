@@ -8,7 +8,7 @@ volumes:
 services:
   gw-readonly:
     container_name: gw-mainnet_v1-readonly
-    image: ghcr.io/godwokenrises/godwoken:1.7.4-poly.1.5.1
+    image: ghcr.io/godwokenrises/godwoken:v1.12.0
     expose: [8119, 8219]
     healthcheck:
       test: /bin/gw-healthcheck.sh
