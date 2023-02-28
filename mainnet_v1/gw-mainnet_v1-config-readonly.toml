@@ -72,4 +72,4 @@ withdraw_cycles_limit = 20000
 
 [mem_pool.extra]
 allowed_sudt_proxy_creator_account_id = [3]
-sudt_proxy_code_hashes = [] 
+sudt_proxy_code_hashes = ["0xde4542f5a5bd32c09cd98e9752281f88900a059aab7ac103edd9df214f136c52"]
