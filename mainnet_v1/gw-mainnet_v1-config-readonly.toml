@@ -47,7 +47,7 @@ hash_type = 'type'
 args = '0x65c41e085ce5edfc7013ae7191635b3888f155c9'
 
 [mem_pool]
-execute_l2tx_max_cycles = 500000000
+execute_l2tx_max_cycles = 3000000000
 restore_path = '/mnt/mem-pool/mem-block'
 [mem_pool.mem_block]
 max_deposits = 50
