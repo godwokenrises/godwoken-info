@@ -8,7 +8,7 @@ volumes:
 services:
   gw-readonly:
     container_name: gw-mainnet_v1-readonly
-    image: ghcr.io/godwokenrises/godwoken:1.7.4-poly.1.5.1
+    image: ghcr.io/godwokenrises/godwoken:v1.12.0
     expose: [8119, 8219]
     healthcheck:
       test: /bin/gw-healthcheck.sh
@@ -51,7 +51,7 @@ services:
     - mainnet_v1-redis-data:/data
 
   web3:
-    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.9.3
+    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v1.12.0
     healthcheck:
       test: curl http://127.0.0.1:8024 || exit 1
     volumes:
@@ -68,7 +68,7 @@ services:
         condition: service_healthy
 
   web3-indexer:
-    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.9.3
+    image: ghcr.io/godwokenrises/godwoken-web3-indexer-prebuilds:v1.12.0
     volumes:
     - ./web3-indexer-config.toml:/var/lib/web3-indexer/indexer-config.toml
     - ./chain-data/logs:/var/lib/web3-indexer/logs
