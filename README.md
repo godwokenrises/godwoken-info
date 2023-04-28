@@ -13,7 +13,7 @@
 * [How to test your Solidity contracts on Godwoken v1 using Hardhat](https://github.com/godwokenrises/godwoken-tests)
 * [Godwoken CHANGELOG](https://github.com/godwokenrises/godwoken/blob/develop/CHANGELOG.md)
 
-## Deprcated Network
+## Deprecated Networks
 
 * [Testnet_v1.0](./testnet_v1_0/) (deprecated)
 * [Testnet_v0](./testnet_v0) (deprecated)
