@@ -26,7 +26,12 @@ services:
     - RUST_LOG=info
     command: |
       bash -c 'set -ex
-        godwoken rewind-to-last-valid-block --config-path /deploy/config.toml
+        # use this command to rewind the chain to the last valid block, if the node has encountered
+        # some bad blocks accidentally due to e.g. version/configuration differences.
+        # see also: https://github.com/godwokenrises/godwoken/pull/832
+        # godwoken rewind-to-last-valid-block --config-path /deploy/config.toml
+
+        # Run Godwoken
         godwoken run -c /deploy/config.toml
       '
     deploy:
