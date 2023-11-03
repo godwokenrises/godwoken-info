@@ -15,7 +15,7 @@ validator_script_type_hash = '0xdb9896ecb952ab72f4f533d33fd9562fc1333fb6903899e9
 [[backends]]
 backend_type = 'Polyjuice'
 validator_path = '/scripts/godwoken-polyjuice/validator'
-generator_path = '/scripts/godwoken-polyjuice/generator.aot'
+generator_path = '/scripts/godwoken-polyjuice/generator.asm'
 validator_script_type_hash = '0x636b89329db092883883ab5256e435ccabeee07b52091a78be22179636affce8'
 
 [genesis]
@@ -69,8 +69,9 @@ args = '0x2d8d67c8d73453c1a6d6d600e491b303910802e0cc90a709da9b15d26c5c48b3'
 # Note: Running your own CKB mainnet node is recommended.
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker#run-a-ckb-testnet-node
 [rpc_client]
-indexer_url = 'https://mainnet.ckb.dev/indexer'
 ckb_url = 'https://mainnet.ckb.dev/rpc'
+# An independent ckb-indexer is not required since https://github.com/godwokenrises/godwoken/pull/1084
+# indexer_url = 'https://mainnet.ckb.dev/indexer'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
@@ -78,7 +79,31 @@ err_receipt_ws_listen = '0.0.0.0:8219'
 
 [rpc]
 allowed_sudt_proxy_creator_account_id = []
-sudt_proxy_code_hashes = []
+sudt_proxy_code_hashes = ["0xa816b946a890cd593f780e8b6859a9b82314c5df4c8270d66f7c502e818345dc"]
+# only enable polyjuice_contract_creator whitelist when we want to re-sync mainnet_v0
+# but it should be disabled on a fullnode.
+allowed_polyjuice_contract_creator_address = [
+"0x55824f0ed489feaaabd640459373dfb79c187dd2",
+"0x9c023610d438dE45B8D53358DE663233Ce752F77",
+"0x666666488c608edec79d6f85094e6e514a67064f",
+"0x085a61d7164735FC5378E590b5ED1448561e1a48",
+"0xBAc93b5b19FeC3D8Da65A81bBf79F23D33A50a2D",
+"0x740d5718a79A8559fEeE8B00922F8Cd773A81D84",
+"0x66452d81a51411F8d4CE1eeF004377eEB52bf65a",
+"0x528695C5143Ab0866f69deEB6Be939838e9c5013",
+"0xE0428Cdb7AD2Ab3560dD96462927c4C68a032800",
+"0x72e0c4199049f6143afb808104F804f31cA30540",
+"0x9db61d3e133817c5d33dd1eef2bc322a01f21e26",
+"0xA9Bd87FBdd609bfb170e99da2bF3C8a23760ead2",
+"0x9039084d86411e805434E60D52209442646263fB",
+"0xbB91644F26b075bda47a13682DAD006eb9d70867",
+"0xD9ebB6d95f3D8f3Da0b922bB05E0E79501C13554",
+"0x666662f385F67af9922Eac9912577c2Afb4d5B41",
+"0x666668f8c000262143F7D2C8e69dB53Da052B690",
+"0x5d49588F7eB13975AaE0A75B3993e2C2D9c0D35d",
+"0xB2a9e8559821D0cA87B7D2E119d417634f1BDd44",
+"0xe4Cee67855d2431aa6B7ae6b6b0274864A05f97C",
+"0xDf6Ab9F6dAF25dBD31513a6cCc441CcfB210a53c"]
 polyjuice_script_code_hash = "0x636b89329db092883883ab5256e435ccabeee07b52091a78be22179636affce8"
 
 [debug]

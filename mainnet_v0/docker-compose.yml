@@ -42,10 +42,11 @@ services:
     - ./chain-data/redis-data:/data
 
   gw-mainnet-readonly:
-    container_name: gw-mainnet-readonly-202206
-    # depends_on:
-    # - ckb-mainnet-indexer
-    image: ghcr.io/nervosnetwork/godwoken-prebuilds:v0.10.4-hotfix.1-202205201051
+    container_name: gw-mainnet-v0-readonly-202310
+    # Related PR: https://github.com/godwokenrises/godwoken-docker-prebuilds/pull/90
+    # > docker inspect ghcr.io/godwokenrises/godwoken-prebuilds:0.11.0
+    # > => "ref.component.godwoken": "v0.11.0  becf2bb4"
+    image: ghcr.io/godwokenrises/godwoken-prebuilds:0.11.0
     volumes:
     - ./chain-data/:/mainnet_v0/
     - ./gw-readonly-config.toml:/deploy/config.toml
@@ -60,7 +61,7 @@ services:
     - 8219
 
   web3:
-    image: nervos/godwoken-web3-prebuilds:v0.13.6
+    image: ghcr.io/godwokenrises/godwoken-web3-prebuilds:v0.13.11
     healthcheck:
       test: curl http://127.0.0.1:3000 || exit 1
     volumes:
