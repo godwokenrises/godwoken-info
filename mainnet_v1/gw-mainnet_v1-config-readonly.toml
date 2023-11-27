@@ -4,11 +4,6 @@ node_mode = 'readonly'
 # see: https://docs.nervos.org/docs/basics/guides/run-ckb-with-docker/#run-a-ckb-mainnet-node
 [rpc_client]
 ckb_url = 'https://mainnet.ckb.dev/rpc'
-# If a CKB indexer RPC url is explicitly specified, we assume that we are
-# connecting to a standalone indexer (i.e. we use get_tip).
-# Otherwise we just use CKB RPC url and assume that we are connecting to CKB
-# builtin indexer (i.e. we use get_indexer_tip).
-# indexer_url = 'standalone ckb-indexer, optional'
 
 [rpc_server]
 listen = '0.0.0.0:8119'
